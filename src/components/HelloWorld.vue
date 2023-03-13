@@ -1,6 +1,6 @@
 <template>
   <v-container class="fill-height">
-    <h1 class="mx-auto mb-10">This is a VueJS 3, Vuetify and VueI18n demo application </h1>
+    <h1 class="mx-auto mb-10">{{ $t("hello_world.title") }} </h1>
   </v-container>
 </template>
 

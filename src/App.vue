@@ -1,11 +1,12 @@
 <template>
   <v-app>
     <v-main>
-      <BaseLayout />
+    <router-view></router-view>
     </v-main>
   </v-app>
 </template>
 
 <script setup lang="ts">
-  import BaseLayout from '@/layouts/default/BaseLayout.vue'
+  import BaseLayout from '@/layouts/BaseLayout.vue'
+
 </script>

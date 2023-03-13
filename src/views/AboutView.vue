@@ -1,5 +1,5 @@
 <template>
-  <HelloWorld />
+  <h2>{{ $t("about.header") }}</h2>
 </template>
 
 <script lang="ts" setup>

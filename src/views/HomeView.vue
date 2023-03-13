@@ -14,8 +14,8 @@
            
           >
           <HelloWorld />
-          <p>This paragraph is translated to your preffered language using VueI18n</p>
-          <p>You cand also change the language while app is running.</p>
+          <p>{{ t("home.header") }}</p>
+          <p>{{ t("home.change_language_hint")}}</p>
           <p>This page was accessed 30 times.</p>
         
         </v-sheet>
@@ -28,4 +28,8 @@
 
 <script lang="ts" setup>
   import HelloWorld from '@/components/HelloWorld.vue'
+  import { useI18n } from 'vue-i18n';
+  const { t } = useI18n();
+
+
 </script>

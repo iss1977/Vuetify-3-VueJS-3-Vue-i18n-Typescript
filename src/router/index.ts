@@ -4,7 +4,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 const routes = [
   {
     path: '/',
-    component: () => import('@/layouts/default/BaseLayout.vue'),
+    component: () => import('@/layouts/BaseLayout.vue'),
     children: [
       {
         path: '',
@@ -14,13 +14,20 @@ const routes = [
         // which is lazy-loaded when the route is visited.
         component: () => import(/* webpackChunkName: "home" */ '@/views/HomeView.vue'),
       },
+      
+      {
+        path: 'about',
+        name: 'About',
+        component: () => import(/* webpackChunkName: "home" */ '@/views/AboutView.vue'),
+      },
     ],
   },
 ]
 
 const router = createRouter({
-  history: createWebHistory(process.env.BASE_URL),
+  history: createWebHistory(import.meta.env.BASE_URL),
   routes,
 })
+
 
 export default router
