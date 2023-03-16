@@ -1,6 +1,7 @@
 import { createI18n } from 'vue-i18n';
 import  { roPluralizationRules }  from './rules/pluralization';
 import { numberFormats as ns } from './rules/numbers';
+import datetimeFormats from './rules/datetime';
 
 //import en from './locales/en.json';
 
@@ -28,6 +29,9 @@ const translations = {
     },
     about: {
       header: "This is the about page",
+    },
+    donations: {
+      raised_amount: "The current charity program raised {donations} from the participants"
     }
   },
 
@@ -52,6 +56,9 @@ const translations = {
     },
     about: {
       header: "Aceasta este pagina despre",
+    },
+    donations: {
+      raised_amount: "Programul curent de intreajutorare a strans {donations} de la paricipanti"
     }
   }
 }
@@ -112,32 +119,15 @@ export const defaultLocale = import.meta.env.VITE_DEFAULT_LOCALE;
 // })
 
 export const i18n = createI18n<false>({
-  // globalInjection: true,
+  globalInjection: true,
   legacy: false,
   locale: defaultLocale,
   fallbackLocale: 'en',
   messages: {
-    [Locales.EN]: messages[Locales.EN],
-    'ro':  messages.ro,
+    [Locales.EN]: messages[Locales.EN], // or:  'en': messages.en
+    'ro':  messages.ro, // or: [Locales.RO]: messages[Locales.RO]
   },
-  datetimeFormats: {
-    'ro': {
-      short: {
-        hour: 'numeric',
-        minute: 'numeric',
-        second: 'numeric',
-        timeZoneName: 'short',
-      }
-    },
-    'en': {
-      short: {
-        hour: 'numeric',
-        minute: 'numeric',
-        second: 'numeric',
-        timeZoneName: 'short',
-      }
-    }
-  },
+  //datetimeFormats: datetimeFormats,
   numberFormats: {
     'ro': {
       currency: {

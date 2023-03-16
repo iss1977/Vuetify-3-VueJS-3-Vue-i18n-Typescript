@@ -2,7 +2,7 @@
   <v-container>
     <v-row>
       <v-col cols="12">
-        <v-sheet class="pa-12" color="grey-lighten-3">
+        <v-sheet class="pa-xs-0 pa-sm-12" color="grey-lighten-3">
           <v-sheet :elevation="6" class="mx-auto ma-6 pa-10 pt-2 text-center">
             <LocalizationInfo class="text-right"/>
             <VSheetTitle :title="t('sheet_title.translations')"/>
@@ -29,6 +29,8 @@
             <p>{{ $n(0.99123, 'percent', { minimumFractionDigits: 2 }) }}</p>
             <p>{{ $n(12.11612345, 'decimal') }}</p>
             <p>{{ $n(12145281111, 'decimal', 'ro') }}</p>
+            <p>Translation with interpolation:</p>
+            <p>{{ $t("donations.raised_amount", { donations: $n(36000, "currency") }) }}</p>
 
             <!-- "i18n-t" tag is only needed to prevent console warning : 
               [intlify] Not found parent scope. use the global scope. -->
