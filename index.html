@@ -6,9 +6,25 @@
     <link rel="icon" href="/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vuetify 3</title>
+    <style>
+        #loader {
+            position: absolute;
+            z-index: 99999;
+            inset: 0;
+            background-color: aliceblue;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
 </head>
 
 <body>
+    <div id="loader">
+        <p>
+            Loading
+        </p>
+    </div>
     <div id="app"></div>
     <script type="module" src="/src/main.ts"></script>
 </body>

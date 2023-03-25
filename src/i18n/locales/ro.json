@@ -1,0 +1,26 @@
+{
+  "nav": {
+    "home": "Acasa",
+    "about": "Despre"
+  },
+  "hello_world": {
+    "title": "Salutari de la Vuetify 3 internationalizare"
+  },
+  "sheet_title": {
+    "translations":"Mesaje - traducere in limba locala"
+  },
+  "home": {
+    "header": "Acest paragraf a fost tradus in limba dvs preferata folosind Vue-i18n",
+    "translation_via_script":"Urmatorul text: \"{translated}\" a fost trafus in sectiunea script",
+    "change_language_hint": "Puteti schimba limba si in timp ce aplicatia {app_name} ruleaza.",
+    "multiple_local_messages":"Se pot utiliza mesaje locale, doua exemple va putem oferi aici:  {msg1} si aici: {msg2}",
+    "button_description":"Butonul",
+    "button_clicks": " nu a fost actionat| a fost actionat o singura data | a fost actionat de {count} ori."
+  },
+  "about": {
+    "header": "Aceasta este pagina despre"
+  },
+  "donations": {
+    "raised_amount": "Programul curent de intreajutorare a strans {donations} de la paricipanti"
+  }
+}

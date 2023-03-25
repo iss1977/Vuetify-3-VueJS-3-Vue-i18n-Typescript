@@ -1,19 +1,26 @@
 {
-  "locale": {
-    "en": "English",
-    "ro": "Romanian"
-  },
   "nav": {
     "home": "Home",
     "about": "About"
   },
-  "home": {
-    "header": "Welcome to the Vue 3 I18n tutorial!",
-    "created_by": "This tutorial was brought to you by {company}.",
-    "num_visits": "This page hasn't been visited :( | This page has been visited {n} time | This page has been visited {n} times"
+"sheet_title": {
+  "translations": "Messages - local language"
   },
-  "about": {
-    "header": "About us",
-    "donations": "Donations raised: {donations}"
+"hello_world": {
+  "title": "Hello from Vuetify 3 internationalization!"
+  },
+"home": {
+  "header": "Tada! This paragraph is translated to your preffered language using VueI18n",
+  "translation_via_script": "The following text: \"{translated}\" was translated in the script section.",
+  "change_language_hint": "You cand also change the language while the {app_name} app is running.",
+  "multiple_local_messages": "Multiple local messages cand be used like here: {msg1} or {msg2}",
+  "button_description": "The button",
+  "button_clicks": " has not been clicked | has been clicked once | has been clicked {count} times"
+  },
+"about": {
+  "header": "This is the about page"
+  },
+"donations": {
+  "raised_amount": "The current charity program raised {donations} from the participants"
   }
 }

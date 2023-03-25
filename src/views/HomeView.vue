@@ -57,6 +57,12 @@
 
 
     </v-row>
+
+    <v-row>
+      <v-col cols="12">
+        <DateTimeViewComponent />
+      </v-col>
+    </v-row>
   </v-container>
 </template>
 
@@ -66,6 +72,7 @@ import { useI18n } from 'vue-i18n';
 import { TranslateResult } from "vue-i18n";
 
 import VSheetTitle from '@/components/VSheetTitle.vue'
+import DateTimeViewComponent from '@/components/DateTimeViewComponent.vue';
 import LocalizationInfo from '@/components/info.containers/LocalizationInfo.vue';
 
 const { t, n, locale } = useI18n({ useScope: 'global' });

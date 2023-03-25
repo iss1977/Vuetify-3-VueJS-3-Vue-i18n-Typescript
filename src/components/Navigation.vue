@@ -15,24 +15,24 @@
 
       <v-spacer></v-spacer>
 
-      <v-responsive max-width="260">
+      <v-responsive max-width="250">
         <ChooseLanguage />
       </v-responsive>
     </v-container>
   </v-app-bar>
 
-  <nav>
+  <!-- <nav>
     <ul>
       <li>
-        <!-- <RouterLink to="/">{{ $t("nav.home") }}</RouterLink> -->
+        <RouterLink to="/">{{ $t("nav.home") }}</RouterLink>
         <RouterLink to="/">Home</RouterLink>
       </li>
       <li>
-        <!-- <RouterLink to="/about">{{ $t("nav.about") }}</RouterLink> -->
+         <RouterLink to="/about">{{ $t("nav.about") }}</RouterLink> 
         <RouterLink to="/about">About</RouterLink>
       </li>
     </ul>
-  </nav>
+  </nav> -->
 </template>
 
 <script setup lang="ts">
