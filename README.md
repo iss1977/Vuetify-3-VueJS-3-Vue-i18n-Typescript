@@ -8,6 +8,7 @@ Features:
 - pluralization
 - change the language on the fly
 - navigation links translations
+- integration of date-fns and vue 3 datepicker for language
 
 
 ## Project setup

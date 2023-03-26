@@ -1,4 +1,4 @@
-import { createI18n } from 'vue-i18n';
+import { createI18n, DatetimeFormat, DateTimeOptions } from 'vue-i18n';
 import  { roPluralizationRules }  from './rules/pluralization';
 import { numberFormats as ns } from './rules/numbers';
 //import datetimeFormats from './rules/datetime';
@@ -82,127 +82,140 @@ const messages = {
   [Locales.RO]: ro
 }
 
-const datetimeFormats: DateTimeFormats = {
-  en: {
-    short: {
-      hour: 'numeric',
-      minute: 'numeric',
-      second: 'numeric',
-      timeZoneName: 'short',
-      timeZone: 'Asia/Tokyo'
-    }
-  },
-  ro: {
-    short: {
-      hour: 'numeric',
-      minute: 'numeric',
-      second: 'numeric',
-      timeZoneName: 'short',
-      timeZone: 'Asia/Tokyo'
-    }
-  },
-}
-
-// const numberFormats = {
-//   [Locales.EN]: ns[Locales.EN],
-//   [Locales.RO]: ns[Locales.RO]
+// interface DateTimeFormatOptions {
+//   localeMatcher?: "best fit" | "lookup" | undefined;
+//   weekday?: "long" | "short" | "narrow" | undefined;
+//   era?: "long" | "short" | "narrow" | undefined;
+//   year?: "numeric" | "2-digit" | undefined;
+//   month?: "numeric" | "2-digit" | "long" | "short" | "narrow" | undefined;
+//   day?: "numeric" | "2-digit" | undefined;
+//   hour?: "numeric" | "2-digit" | undefined;
+//   minute?: "numeric" | "2-digit" | undefined;
+//   second?: "numeric" | "2-digit" | undefined;
+//   timeZoneName?: "short" | "long" | "shortOffset" | "longOffset" | "shortGeneric" | "longGeneric" | undefined;
+//   formatMatcher?: "best fit" | "basic" | undefined;
+//   hour12?: boolean | undefined;
+//   timeZone?: string | undefined;
 // }
 
-// console.log(numberFormats)
-// const numberFormats = {
-//   ro: {
-//     currency: {
-//       style: 'currency',
-//       currencyDisplay: 'symbol',
-//       currency: 'JPY'
-//     }
-//   },
-//   en: {
-//     currency: {
-//       style: 'currency',
-//       currencyDisplay: 'symbol',
-//       currency: 'JPY'
-//     }
-//   }
-// }
-
-
-export const defaultLocale = import.meta.env.VITE_DEFAULT_LOCALE;
-
-// Create VueI18n instance with options
-// export const i18n = createI18n<[MessageSchema], 'en' | 'ro' >({
-
-//   locale: import.meta.env.VITE_DEFAULT_LOCALE, // set locale
-//   fallbackLocale: import.meta.env.FALLBACK_LOCALE,
-//   legacy: false,
-//   globalInjection: true, // to make $t() available in templates
-//   pluralRules: {
-//     ro: roPluralizationRules
-//   },
-//   numberFormats: numberFormats,
-//   messages: messages,
-// })
-
-import type { MessageSchema, NumberSchema, DefineDateTimeFormat } from './schema';
-import { DateTimeFormats } from '@intlify/core-base';
-
-export const i18n = createI18n<{
-  message: MessageSchema
-  number: NumberSchema
-},
-'en' | 'ro',
-false >({
-  globalInjection: true,
-  legacy: false,
-  locale: defaultLocale,
-  fallbackLocale: 'en',
-  messages: messages,
-  datetimeFormats: {
-    en:  {
+// : DateTimeFormats<DateTimeFormat, string> =
+const datetimeFormats = {
+  
+    'en': {
       short: {
         year: 'numeric', month: 'short', day: 'numeric'
       },
       long: {
         year: 'numeric', month: 'short', day: 'numeric',
         weekday: 'short', hour: 'numeric', minute: 'numeric'
-      },
+      }
     },
-    ro: {
+    'ro': {
       short: {
         year: 'numeric', month: 'short', day: 'numeric'
       },
       long: {
-        year: 'numeric', month: 'long', day: 'numeric',
-        weekday: 'long', hour: 'numeric', minute: 'numeric'
+        year: 'numeric', month: 'short', day: 'numeric',
+        weekday: 'short', hour: 'numeric', minute: 'numeric', hour12: true
       }
     }
-  },
   
-  //datetimeFormats,
-  numberFormats: {
-    'ro': {
-      currency: {
-        style: 'currency', currencyDisplay: 'symbol', currency: 'RON'
-      },
-      decimal: {
-        style: 'decimal', minimumFractionDigits: 3, maximumFractionDigits: 5
-      },
-      percent: {
-        style: 'percent', useGrouping: false
-      },
-    },
-    'en': {
-      currency: {
-        style: 'currency', currencyDisplay: 'symbol', currency: 'USD'
-      },
-      decimal: {
-        style: 'decimal', minimumFractionDigits: 2, maximumFractionDigits: 2
-      },
-      percent: {
-        style: 'percent', useGrouping: true
-      }
-    }
+}
+
+
+// interface DateTimeFormatOptions {
+//   localeMatcher?: "best fit" | "lookup" | undefined;
+//   weekday?: "long" | "short" | "narrow" | undefined;
+//   era?: "long" | "short" | "narrow" | undefined;
+//   year?: "numeric" | "2-digit" | undefined;
+//   month?: "numeric" | "2-digit" | "long" | "short" | "narrow" | undefined;
+//   day?: "numeric" | "2-digit" | undefined;
+//   hour?: "numeric" | "2-digit" | undefined;
+//   minute?: "numeric" | "2-digit" | undefined;
+//   second?: "numeric" | "2-digit" | undefined;
+//   timeZoneName?: "short" | "long" | "shortOffset" | "longOffset" | "shortGeneric" | "longGeneric" | undefined;
+//   formatMatcher?: "best fit" | "basic" | undefined;
+//   hour12?: boolean | undefined;
+//   timeZone?: string | undefined;
+// }
+
+
+const enDateTimeFormatOptions: Intl.DateTimeFormatOptions = {
+        year: "numeric" , //| "2-digit" 
+        month: "numeric", // | "2-digit" | "long" | "short" | "narrow" | 
+        day: "numeric" , //| "2-digit" 
+        hour: "numeric",// | "2-digit"
+        minute: "numeric", // | "2-digit" | undefined;
+        second: "numeric", // | "2-digit" | undefined;
+        //timeZoneName?: "short" | "long" | "shortOffset" | "longOffset" | "shortGeneric" | "longGeneric" | undefined;
+        //formatMatcher?: "best fit" | "basic" | undefined;
+        //hour12?: boolean | undefined;
+        //timeZone?: string | undefined;
+}
+
+const enDateTimeFormat: DateTimeFormat = {
+  short : enDateTimeFormatOptions
+}
+
+const roDateTimeFormat: DateTimeFormat = {
+  short : enDateTimeFormatOptions
+}
+
+const enroDateTimeFormats: DateTimeFormats<DateTimeFormat, 'en' | 'ro'> = {
+  en: enDateTimeFormat,
+  ro: roDateTimeFormat,
+}
+
+export const defaultLocale = import.meta.env.VITE_DEFAULT_LOCALE;
+
+
+import type { MessageSchema, NumberSchema, DefineDateTimeFormat } from './schema';
+import { DateTimeFormats, DateTimeFormat } from '@intlify/core-base';
+
+
+const enNumberSchema : NumberSchema = {
+  currency: {
+    style: 'currency',
+    currencyDisplay: 'symbol',
+    currency: 'EUR'
+  },
+  decimal: {
+    style: 'decimal', minimumFractionDigits: 2, maximumFractionDigits: 2
+  },
+  percent: {
+    style: 'percent', useGrouping: false
   }
+}
+
+const roNumberSchema : NumberSchema = {
+  currency: {
+    style: 'currency',
+    currencyDisplay: 'symbol',
+    currency: 'EUR'
+  },
+  decimal: {
+    style: 'decimal', minimumFractionDigits: 2, maximumFractionDigits: 2
+  },
+  percent: {
+    style: 'percent', useGrouping: false
+  }
+}
+
+
+const numberFormats = {
+  en: enNumberSchema,
+  ro: roNumberSchema
+}
+  
+
+export const i18n = createI18n<{message: MessageSchema, number: NumberSchema}, 'en' | 'ro', false >({
+  globalInjection: true,
+  legacy: false,
+  locale: defaultLocale,
+  fallbackLocale: 'en',
+  messages: messages,
+  datetimeFormats: enroDateTimeFormats,
+  numberFormats:numberFormats,
 })
 
 console.log(i18n)
