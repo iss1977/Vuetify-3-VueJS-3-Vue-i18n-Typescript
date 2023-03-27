@@ -1,10 +1,23 @@
 {
+  "date_picker":{
+    "days":["Mo","Tu","We","Th","Fr","Sa","Su"],
+    "ok": "Select",
+    "cancel": "Cancel",
+    "select_date": "Select date",
+    "selected_date_is":"Selected date is",
+    "sample_dates_long_short": "Sample dates in short and log formats",
+    "short_date_text": "Short date",
+    "long_date_text": "Long date",
+    "long_date_time_format_text":"Long date/time format",
+    "translation_using_i18n-d_tag": "Translation using i18n-d tag"
+  },
   "nav": {
     "home": "Home",
     "about": "About"
   },
 "sheet_title": {
-  "translations": "Messages - local language"
+  "translations": "Messages - local language",
+  "numbers": "Numbers"
   },
 "hello_world": {
   "title": "Hello from Vuetify 3 internationalization!"

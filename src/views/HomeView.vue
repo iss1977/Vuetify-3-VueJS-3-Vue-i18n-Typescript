@@ -21,6 +21,7 @@
       <v-col cols="12">
         <v-sheet class="pa-12" color="grey-lighten-3">
           <v-sheet :elevation="6" class="mx-auto ma-6 pa-10 text-center">
+            <VSheetTitle :title="t('sheet_title.numbers')"/>
             <p>{{ $n(10000, 'currency') }}</p>
             <p>{{ $n(10000, 'currency', 'ro') }}</p>
             <p>{{ $n(10000, 'currency', 'en', { useGrouping: false }) }}</p>

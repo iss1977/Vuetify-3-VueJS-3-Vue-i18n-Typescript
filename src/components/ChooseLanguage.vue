@@ -41,12 +41,12 @@ const items: ItemType[] = [
   {
     title: "Romana",
     value: "ro",
-    img: '/src/assets/flags-svg/ro.svg'
+    img: '/src/assets/flag-ro.svg'
   },
   {
     title: "English",
     value: "en",
-    img: '/src/assets/flags-svg/gb.svg'
+    img: '/src/assets/flag-gb.svg'
   }
 ]
 const selected:  Ref<ItemType> = ref<ItemType>(items[0])
