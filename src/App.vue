@@ -1,7 +1,6 @@
 <template>
   <v-app>
-    <v-main class="bg-grey-lighten-5">
-      <v-container>
+    <v-main class="bg-grey-lighten-5 pt-0">
         <!-- <v-row>
           <v-col>
             <select v-model="$i18n.locale">
@@ -11,7 +10,6 @@
           </v-col>
         </v-row> -->
         <router-view></router-view>
-      </v-container>
 
     </v-main>
   </v-app>

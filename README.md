@@ -26,3 +26,6 @@ _https://lokalise.com/blog/vue-i18n/_
 _https://vue3datepicker.com/_
 
 _https://vue-i18n.intlify.dev/_
+
+
+https://github.dev/Joabsonlg/vuetify-landing-page

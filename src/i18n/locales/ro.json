@@ -13,7 +13,8 @@
   },
   "nav": {
     "home": "Acasa",
-    "about": "Despre"
+    "about": "Despre",
+    "landing": "Lansare"
   },
   "hello_world": {
     "title": "Salutari de la Vuetify 3 internationalizare"

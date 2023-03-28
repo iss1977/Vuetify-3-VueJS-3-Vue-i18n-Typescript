@@ -50,12 +50,14 @@ watch(
       console.log('New locale in anvigation', newVal)
       links[0].name = t('nav.home')
       links[1].name = t('nav.about') //TODO: find a better solution
+      links[2].name = t('nav.landing') //TODO: find a better solution
   }
 );
 
 const links = reactive([
   {name: t('nav.home'), to: '/'},
   {name: t('nav.about'), to: '/about'},
+  {name: t('nav.landing'), to: '/landing'},
 ])
 
 

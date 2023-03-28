@@ -13,7 +13,8 @@
   },
   "nav": {
     "home": "Home",
-    "about": "About"
+    "about": "About",
+    "landing": "Landing"
   },
 "sheet_title": {
   "translations": "Messages - local language",
