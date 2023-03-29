@@ -1,16 +1,7 @@
 <template>
   <v-app>
     <v-main class="bg-grey-lighten-5 pt-0">
-        <!-- <v-row>
-          <v-col>
-            <select v-model="$i18n.locale">
-              <option v-for="(o, i) in LOCALES" :key="i" :value="o.value" :selected="o.value === defaultLocale">{{
-                o.caption }}</option>
-            </select>
-          </v-col>
-        </v-row> -->
         <router-view></router-view>
-
     </v-main>
   </v-app>
 </template>
