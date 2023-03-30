@@ -35,18 +35,18 @@
 
     <!-- FEATURES -->
 
-    <v-container fluid id="features" class="mt-2">
+    <v-container fluid id="features" class="mt-12 px-0 position-relative">
       <v-row class="justify-center">
         <v-col cols="10">
           <v-row>
             <v-col v-for="(feature, index) in features" :key="index">
               <v-hover v-slot="{ isHovering, props }" open-delay="100">
 
-                <v-card v-bind="props"  class="card mx-3 pa-3" :elevation="isHovering? 10: 5" :id="'card'.concat(index.toString())">
+                <v-card v-bind="props"  class="card mx-3 pa-3" :class ="{up : isHovering}" :elevation="isHovering? 10: 5" :id="'card'.concat(index.toString())">
 
                   <div class="d-flex align-center justify-space-around">
                     <v-avatar size="100">
-                      <v-img src="https://cdn.vuetifyjs.com/images/john.jpg" alt="John"></v-img>
+                      <v-img :src="feature.img" alt="John"></v-img>
                     </v-avatar>
                   </div>
 
@@ -69,6 +69,9 @@
           </v-row>
         </v-col>
       </v-row>
+      <div class="svg-border-waves2 text-white">
+        <v-img src="@/assets/wave2.svg"/>
+      </div>
     </v-container>
   </section>
 </template>
@@ -76,22 +79,23 @@
 <script setup lang="ts">
 const features = [
   {
-    img: ("@/assets/img/icon2.png"),
+    img: (new URL("@/assets/icon1.png", import.meta.url).href),
     title: "Design Limpo",
     text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
   },
   {
-    img: ("@/assets/img/icon1.png"),
+    img: (new URL("@/assets/icon2.png", import.meta.url).href),
     title: "Dados Seguros",
     text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
   },
   {
-    img: ("@/assets/img/icon3.png"),
+    img: (new URL("@/assets/icon3.png", import.meta.url).href),
     title: "Código Aberto",
     text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
   },
 ];
 
+console.log(features)
 
 </script>  
 
@@ -114,6 +118,10 @@ const features = [
 
 #hero {
   z-index: 0;
+  background-image: url("@/assets/bgMain.png");
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
 }
 
 .svg-border-waves img {
@@ -125,6 +133,20 @@ const features = [
   z-index: 10;
 }
 
+#features {
+  background-color: transparent;
+  isolation: isolate;
+}
+
+.svg-border-waves2{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  z-index:-1;
+  background-color: transparent;
+
+}
+
 #img-wave-1> {
   img {
     object-fit: fill;
@@ -134,21 +156,31 @@ const features = [
 .card {
   min-height: 300px;
   padding: 10px;
-  transition: 0.5s ease-out;
+  border-radius: 35px 5px 30px 5px !important;
+
+  transition-property: all !important;
+  transition-duration: 0.2s !important;
+  transition-timing-function: ease-in-out !important;
+  transition-delay: 0.1s !important;
+  &.up {
+    transform: translateY(-20px);
+  }
+  
+  &.up .v-img{
+  margin-bottom: 15px;
+  transform: scale(1.1) !important;
+  }  
 }
+
+.v-img {
+    transition: transform 0.2s ease-in-out !important;
+  }
 
 .card h1 {
   margin-bottom: 10px;
 }
 
-.card .v-img {
-  margin-bottom: 15px;
-  transition: 0.75s;
-}
 
 
-.up {
-  transform: translateY(-20px);
-  transition: 0.5s ease-out;
-}
+
 </style>
