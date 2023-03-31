@@ -3,6 +3,8 @@
   <HomeSection />
   <AboutSection />
   <DownloadSection />
+  <PricingSection />
+  
 
 <!-- 
   <div class="content-landing pt-16">
@@ -22,6 +24,8 @@ import LandingPageNavigationComponent from '@/components/LandingPage/LandingPage
 import HomeSection from '@/components/LandingPage/HomeSection.vue';
 import AboutSection from '@/components/LandingPage/AboutSection.vue';
 import DownloadSection from '@/components/LandingPage/DownloadSection.vue';
+import PricingSection from '@/components/LandingPage/PriceingSection.vue';
+
 
 const scrolled = ref(false)
 
