@@ -7,8 +7,8 @@
           <v-card style="width: 100%">
             <h1 class="text-center pt-6 font-weight-light text-h3">Planos</h1>
             <v-divider class="my-6"></v-divider>
-            <v-row class="text-center">
-              <v-col cols="12" sm="6" md="4">
+            <v-row class="text-center justify-center">
+              <v-col cols="12" md="6" lg="4">
                 <div class="flex-center">
                   <v-card-text>
                     <div class="flex-center">
@@ -28,11 +28,7 @@
                     <v-divider class="my-2"/>
                     <div class="text-uppercase text-h4 mt-6 blue--text">R$ 20,00</div>
                     <v-btn
-                        
-                        rounded
-                        outlined
-                        color="blue"
-                        class="mt-6"
+                    class="text-none my-6" color="blue-darken-4" rounded variant="outlined"
                     >
                       Comece Agora!
                     </v-btn>
@@ -41,7 +37,7 @@
                 </div>
                 <v-divider class="mx-4" v-if="!display.smAndUp"></v-divider>
               </v-col>
-              <v-col class="col-12 col-sm-6 col-md-4">
+              <v-col cols="12" md="6" lg="4">
                 <div class="flex-center">
                   <v-card-text>
                     <div class="flex-center">
@@ -61,11 +57,7 @@
                     <v-divider class="my-2"/>
                     <div class="text-uppercase text-h4 mt-6 blue--text">R$ 100,00</div>
                     <v-btn
-                        
-                        rounded
-                        outlined
-                        color="blue"
-                        class="mt-6"
+                      class="text-none my-6" color="blue-darken-4" rounded variant="outlined"
                     >
                       Comece Agora!
                     </v-btn>
@@ -74,9 +66,7 @@
                 </div>
                 <v-divider class="mx-4" v-if="display.smAndUp"></v-divider>
               </v-col>
-              <v-col class="col-12 col-md-4">
-                
-
+              <v-col cols="12" md="6" lg="4">
                 <div class="flex-center">
                   <v-card-text>
                     <div class="flex-center">
@@ -96,11 +86,7 @@
                     <v-divider class="my-2"/>
                     <div class="text-uppercase text-h4 mt-6 blue--text">R$ 500,00</div>
                     <v-btn
-                        
-                        rounded
-                        outlined
-                        color="blue"
-                        class="mt-6"
+                    class="text-none my-6" color="blue-darken-4" rounded variant="outlined"
                     >
                       Comece Agora!
                     </v-btn>

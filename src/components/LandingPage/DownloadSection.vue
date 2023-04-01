@@ -2,9 +2,9 @@
   <section id="download" class="d-flex align-center">
     <v-container fluid>
       <v-row class="align-center justify-center">
-        <v-col cols="10">
+        <v-col cols="11">
           <v-row class="align-center justify-center">
-            <v-col sm="4" class="hidden-xs-only">
+            <v-col sm="4" class="d-sm-none d-md-flex">
               <v-img src="@/assets/ill2.svg" class="d-block ml-auto mr-auto" max-width="350px" />
             </v-col>
             <v-col cols="12" sm="8" class="text-white text-left">

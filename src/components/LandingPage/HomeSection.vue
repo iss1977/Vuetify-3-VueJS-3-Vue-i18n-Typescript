@@ -38,8 +38,8 @@
     <v-container fluid id="features" class="mt-12 px-0 position-relative">
       <v-row class="justify-center">
         <v-col cols="10">
-          <v-row>
-            <v-col v-for="(feature, index) in features" :key="index">
+          <v-row class="d-flex justify-center">
+            <v-col v-for="(feature, index) in features" :key="index" cols="12" md="6" lg="4">
               <v-hover v-slot="{ isHovering, props }" open-delay="100">
 
                 <v-card v-bind="props"  class="card mx-3 pa-3" :class ="{up : isHovering}" :elevation="isHovering? 10: 5" :id="'card'.concat(index.toString())">
@@ -155,6 +155,7 @@ console.log(features)
 
 .card {
   min-height: 300px;
+  
   padding: 10px;
   border-radius: 35px 5px 30px 5px !important;
 

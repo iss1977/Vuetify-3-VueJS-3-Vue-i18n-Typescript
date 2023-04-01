@@ -6,6 +6,7 @@
       temporary
       dark
       src="@/assets/bgDrawer.jpg"
+      id="navigation-drawer"
     >
       <v-list>
         <v-list-item
@@ -50,6 +51,7 @@
         @click.stop="drawer = !drawer"
         class="mr-4"
         v-if="isXs"
+        color="white"
       />
       <div v-else class="text-white">
         <v-btn text @click="">
@@ -87,11 +89,11 @@ const props = defineProps({
   }
 });
 
-const isWindowScrolled = ref(props.scrolled); // used for app bar
+const isWindowScrolled = ref(props.scrolled); // used for app bar color
 
 console.log('props.scrolled', props)
 
-const drawer = ref(true);
+const drawer = ref(false);
 const isXs = ref(false);
     const items=  [
       ["mdi-home-outline", "Home", "#hero"],
@@ -118,7 +120,7 @@ onMounted( () => {
 </script>
 
 
-<style scoped lang="scss">
+<style  lang="scss">
 
 #app-bar::after{
   content: " ";
@@ -141,7 +143,13 @@ onMounted( () => {
   &.scrolled{
     background: rgb(var(--v-theme-secondary),0.8);
   }
-  
 }
+
+
+#navigation-drawer {
+  background: rgb(var(--v-theme-secondary), 0.85) !important;
+  color: white;
+}
+
 </style>
 
