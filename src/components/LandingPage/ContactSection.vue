@@ -1,6 +1,6 @@
 <template>
-  <section class="pb-8" id="contact">
-    <v-container fluid>
+  <section class="pb-12 position-relative" id="contact">
+    <v-container fluid >
       <v-row class="align-center justify-center">
         <v-col cols="10">
           <v-row class="justify-center">
