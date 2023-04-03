@@ -1,37 +1,40 @@
 <template>
   <section id="hero">
-    <v-parallax dark src="@/assets/bgHero.jpg" height="750">
-      <div class="h-100"> <!-- needed for correct display on v-parallax with multiple children -->
-        <v-row justify="center" class="h-100">
-          <v-col cols="10" class="d-flex align-center">
-            <v-row justify="center">
-              <v-col cols="12" md="6" xl="8" class="text-white">
-                <h1 class="text-h3 font-weight-bold mb-14">Vuetify.js</h1>
-                <h1 class="font-weight-light">
-                  Lorem ipsum dolor sit amet consectetur <br />
-                  adipisicing elit. Maiores porro voluptatibus <br />
-                  delectus nam optio harum!
-                </h1>
-                <v-btn rounded="lg" color="transparent" size="large" elevation="16" variant="flat" @click="" class="mt-15"
-                  id="btn-hero">
-                  Saiba mais
-                  <v-icon class="ml-2">mdi-arrow-down</v-icon>
-                </v-btn>
+    <!-- <v-parallax dark src="@/assets/bgHero.jpg" height="750"> -->
+      <div id="parallax" style="height: 750px;">
 
-              </v-col>
-              <v-col cols="12" md="6" xl="4" class="hidden-sm-and-down"> </v-col>
-            </v-row>
-          </v-col>
-        </v-row>
-        <v-row>
-          <v-col cols="12">
-            <div class="svg-border-waves text-white" id="border-waves-01">
-              <v-img src="@/assets/borderWaves.svg" id="img-wave-1" />
-            </div>
-          </v-col>
-        </v-row>
+        <div class="h-100"> <!-- needed for correct display on v-parallax with multiple children -->
+          <v-row justify="center" class="h-100">
+            <v-col cols="10" class="d-flex align-center">
+              <v-row justify="center">
+                <v-col cols="12" md="6" xl="8" class="text-white">
+                  <h1 class="text-h3 font-weight-bold mb-14">Vuetify.js</h1>
+                  <h1 class="font-weight-light">
+                    Lorem ipsum dolor sit amet consectetur <br />
+                    adipisicing elit. Maiores porro voluptatibus <br />
+                    delectus nam optio harum!
+                  </h1>
+                  <v-btn rounded="lg" color="transparent" size="large" elevation="16" variant="flat" @click="" class="mt-15"
+                    id="btn-hero">
+                    Saiba mais
+                    <v-icon class="ml-2">mdi-arrow-down</v-icon>
+                  </v-btn>
+  
+                </v-col>
+                <v-col cols="12" md="6" xl="4" class="hidden-sm-and-down"> </v-col>
+              </v-row>
+            </v-col>
+          </v-row>
+          <v-row>
+            <v-col cols="12">
+              <div class="svg-border-waves text-white" id="border-waves-01">
+                <v-img src="@/assets/borderWaves.svg" id="img-wave-1" />
+              </div>
+            </v-col>
+          </v-row>
+        </div>
       </div>
-    </v-parallax>
+    <!-- </v-parallax> -->
 
     <!-- FEATURES -->
 
@@ -181,7 +184,14 @@ console.log(features)
   margin-bottom: 10px;
 }
 
+#parallax {
+  background-color: #0c02ff;
+background-image: -webkit-linear-gradient(45deg, #0c02ff 0%, #00e2ff 100%);
+background-image: -moz-linear-gradient(45deg, #0c02ff 0%, #00e2ff 100%);
+background-image: -o-linear-gradient(45deg, #0c02ff 0%, #00e2ff 100%);
+background-image: linear-gradient(45deg, #0c02ff 0%, #00e2ff 100%);
 
+}
 
 
 </style>
