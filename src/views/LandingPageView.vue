@@ -5,6 +5,7 @@
   <DownloadSection />
   <PricingSection />
   <ContactSection />
+  <FooterSection />
 
 </template>
 
@@ -17,6 +18,8 @@ import AboutSection from '@/components/LandingPage/AboutSection.vue';
 import DownloadSection from '@/components/LandingPage/DownloadSection.vue';
 import PricingSection from '@/components/LandingPage/PriceingSection.vue';
 import ContactSection from '@/components/LandingPage/ContactSection.vue';
+import FooterSection from '@/components/LandingPage/FooterSection.vue';
+
 
 const scrolled = ref(false)
 
