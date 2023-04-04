@@ -5,7 +5,7 @@
       <v-row class="justify-center align-center">
         <v-col cols="10">
           <v-card style="width: 100%">
-            <h1 class="text-center pt-6 font-weight-light text-h3">Planos</h1>
+            <h1 class="text-center pt-6 font-weight-light text-h3">{{ $t('landing.pricing-section.title')}}</h1>
             <v-divider class="my-6"></v-divider>
             <v-row class="text-center justify-center">
               <v-col cols="12" md="6" lg="4">
@@ -18,19 +18,19 @@
                         </div>
                       </div>
                     </div>
-                    <div class="text--disabled text-uppercase text-h5 my-2">Básico</div>
+                    <div class="text--disabled text-uppercase text-h5 my-2">{{ $t('landing.pricing-section.plan-1.plan-title')}}</div>
                     <v-divider class="my-2"/>
-                    <div class="text-uppercase blue--text">Domínios personalizados</div>
+                    <div class="text-uppercase blue--text">{{ $t('landing.pricing-section.plan-1.plan-feature1')}}</div>
                     <v-divider class="my-2"/>
-                    <div class="text-uppercase blue--text">Limite de 1000 acessos diários</div>
+                    <div class="text-uppercase blue--text">{{ $t('landing.pricing-section.plan-1.plan-feature2')}}</div>
                     <v-divider class="my-2"/>
-                    <div class="text-uppercase blue--text">Outras características...</div>
+                    <div class="text-uppercase blue--text">{{ $t('landing.pricing-section.plan-1.plan-feature3')}}</div>
                     <v-divider class="my-2"/>
-                    <div class="text-uppercase text-h4 mt-6 blue--text">R$ 20,00</div>
+                    <div class="text-uppercase text-h4 mt-6 blue--text">{{ $n(20, 'currency') }}</div>
                     <v-btn
                     class="text-none my-6" color="blue-darken-4" rounded variant="outlined"
                     >
-                      Comece Agora!
+                    {{ $t('landing.pricing-section.action-button-text')}}
                     </v-btn>
                   </v-card-text>
                   <v-divider style="margin-right: -23px" vertical v-if="display.smAndUp"></v-divider>
@@ -47,19 +47,19 @@
                         </div>
                       </div>
                     </div>
-                    <div class="text--disabled text-uppercase text-h5 my-2">Padrão</div>
+                    <div class="text--disabled text-uppercase text-h5 my-2">{{ $t('landing.pricing-section.plan-2.plan-title')}}</div>
                     <v-divider class="my-2"/>
-                    <div class="text-uppercase blue--text">Domínios personalizados</div>
+                    <div class="text-uppercase blue--text">{{ $t('landing.pricing-section.plan-2.plan-feature1')}}</div>
                     <v-divider class="my-2"/>
-                    <div class="text-uppercase blue--text">Limite de 10000 acessos diários</div>
+                    <div class="text-uppercase blue--text">{{ $t('landing.pricing-section.plan-2.plan-feature2')}}</div>
                     <v-divider class="my-2"/>
-                    <div class="text-uppercase blue--text">Outras características...</div>
+                    <div class="text-uppercase blue--text">{{ $t('landing.pricing-section.plan-2.plan-feature3')}}</div>
                     <v-divider class="my-2"/>
-                    <div class="text-uppercase text-h4 mt-6 blue--text">R$ 100,00</div>
+                    <div class="text-uppercase text-h4 mt-6 blue--text">{{ $n(200, 'currency') }}</div>
                     <v-btn
                       class="text-none my-6" color="blue-darken-4" rounded variant="outlined"
                     >
-                      Comece Agora!
+                    {{ $t('landing.pricing-section.action-button-text')}}
                     </v-btn>
                   </v-card-text>
                   <v-divider style="margin-right: -23px" vertical v-if="display.mdAndUp"></v-divider>
@@ -76,19 +76,19 @@
                         </div>
                       </div>
                     </div>
-                    <div class="text--disabled text-uppercase text-h5 my-2">Empresarial</div>
+                    <div class="text--disabled text-uppercase text-h5 my-2">{{ $t('landing.pricing-section.plan-3.plan-title')}}</div>
                     <v-divider class="my-2"/>
-                    <div class="text-uppercase blue--text">Domínios personalizados</div>
+                    <div class="text-uppercase blue--text">{{ $t('landing.pricing-section.plan-3.plan-feature1')}}</div>
                     <v-divider class="my-2"/>
-                    <div class="text-uppercase blue--text">Acessos ilimitados</div>
+                    <div class="text-uppercase blue--text">{{ $t('landing.pricing-section.plan-3.plan-feature2')}}</div>
                     <v-divider class="my-2"/>
-                    <div class="text-uppercase blue--text">Outras características...</div>
+                    <div class="text-uppercase blue--text">{{ $t('landing.pricing-section.plan-3.plan-feature3')}}</div>
                     <v-divider class="my-2"/>
-                    <div class="text-uppercase text-h4 mt-6 blue--text">R$ 500,00</div>
+                    <div class="text-uppercase text-h4 mt-6 blue--text">{{ $n(2000, 'currency') }}</div>
                     <v-btn
-                    class="text-none my-6" color="blue-darken-4" rounded variant="outlined"
+                      class="text-none my-6" color="blue-darken-4" rounded variant="outlined"
                     >
-                      Comece Agora!
+                    {{ $t('landing.pricing-section.action-button-text')}}
                     </v-btn>
                   </v-card-text>
                 </div>
