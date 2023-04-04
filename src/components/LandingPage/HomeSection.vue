@@ -38,11 +38,11 @@
     <v-container fluid id="features" class="pt-12 pb-12 position-relative">
       <v-row class="justify-center">
         <v-col cols="12" sm="10">
-          <v-row class="d-flex justify-center">
+          <v-row class="d-flex justify-center align-stretch">
             <v-col v-for="(feature, index) in features" :key="index" cols="12" md="6" lg="4">
               <v-hover v-slot="{ isHovering, props }" open-delay="100">
 
-                <v-card v-bind="props"  class="card mx-3 pa-3" :class ="{up : isHovering}" :elevation="isHovering? 10: 5" :id="'card'.concat(index.toString())">
+                <v-card v-bind="props"  class="card mx-3 pa-3 h-100" :class ="{up : isHovering}" :elevation="isHovering? 10: 5" :id="'card'.concat(index.toString())">
 
                   <div class="d-flex align-center justify-space-around">
                     <v-avatar size="100">
@@ -86,15 +86,15 @@ const features = [
   },
   {
     img: (new URL("@/assets/icon2.png", import.meta.url).href),
-    title: "Dados Seguros",
-    subTitle: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+    title: t('landing.features-section.feature2.title'),
+    subTitle: t('landing.features-section.feature2.sub-title'),
+    text: t('landing.features-section.feature2.description'),
   },
   {
     img: (new URL("@/assets/icon3.png", import.meta.url).href),
-    title: "Código Aberto",
-    subTitle: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-    text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+    title: t('landing.features-section.feature3.title'),
+    subTitle: t('landing.features-section.feature3.sub-title'),
+    text: t('landing.features-section.feature3.description'),
   },
 ];
 

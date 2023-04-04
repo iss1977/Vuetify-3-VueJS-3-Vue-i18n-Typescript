@@ -12,7 +12,7 @@ Features:
 - navigation links translations
 - integration of date-fns and vue 3 datepicker with vuetify style customisation
 - vue-datepicker localization#
-- mobile optimized demo landing page
+- mobile optimized demo landing page with translated validation messages
 
 
 

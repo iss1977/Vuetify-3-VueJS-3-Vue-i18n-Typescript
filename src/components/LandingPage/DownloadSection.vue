@@ -8,11 +8,9 @@
               <v-img src="@/assets/ill2.svg" class="d-block ml-auto mr-auto" max-width="350px" />
             </v-col>
             <v-col cols="12" sm="8" class="text-white text-left">
-              <h1 class="font-weight-light text-h3 mb-5">Baixar Demonstração</h1>
+              <h1 class="font-weight-light text-h3 mb-5">{{ $t('landing.download-section.title') }}</h1>
               <h1 class="font-weight-light text-h5 mb-4">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste ex
-                animi quod laboriosam vel blanditiis labore alias, aliquid,
-                tempora repellendus non.
+                {{ $t('landing.download-section.text') }}
               </h1>
               <v-btn rounded outlined href="https://github.com/" target="_blank" large color="white" class="mt-4">
                 <v-icon class="mr-2">

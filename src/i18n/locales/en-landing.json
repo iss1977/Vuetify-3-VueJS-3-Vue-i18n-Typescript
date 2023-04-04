@@ -7,10 +7,77 @@
     },
     "features-section": {
       "feature1": {
+        "title": "User interface",
+        "sub-title":"Adjusted to every single language version",
+        "description": "This means that there should be no truncated text in your application and enough white space to make your product easily readable. It’s a good practice to adjust all UI elements containing text to the new language version, e.g. resize buttons, boxes or menus. Colours may have to be adjusted too, as their meaning vary from one culture to another."
+      },
+      "feature2": {
         "title": "Display",
         "sub-title":"Correctly displayed dates and currencies",
         "description": "Calendar formats, measurements, phone numbers, currencies and addresses are just a few examples of items that have to be changed in your multilingual app"
+      },
+      "feature3": {
+        "title": "Clear icons",
+        "sub-title":"Symbols that convey the right message",
+        "description": "There’s nothing more confusing than images that have nothing to do with the content or reflect the message that can’t be clearly understood. Before using an icon or symbol in place of a button name or any other element, make sure it’s appropriate in the target culture and doesn’t insult your users."
       }
+    },
+    "about-section": {
+      "title": "Benefits of Multilingual App",
+      "sub-title": "and How to Create Them",
+      "description-1":"Localization helps translate the app into several new languages. It requires a little bit of advanced planning and is a great tool for expanding into a foreign market. Messages can be refined to cater to audience needs and goes beyond a simple translation process.",
+      "description-2":"Date, time, currency and other relevant factors should be prioritized while localizing. They have to be specific with the geographical distances along with the content. Customize keyboard is a must.",
+      "description-3":"Translating apps from one language to another requires a lot of persistence. It’s not just about translating the words, but equally important is providing an experience that imbibes cultural values."
+    },
+    "download-section": {
+      "title": "Software Testing",
+      "text": "Localized software has to be tested rigorously as the original English software. You don’t want to see a foreign language “out of context” within your software."
+    },
+    "pricing-section": {
+      "title":"Priceing",
+      "action-button-text":"Order now",
+      "plan-1": {
+        "plan-title":"START",
+        "plan-feature1":"No monthly payment",
+        "plan-feature2":"Unlimited words",
+        "plan-feature3":"API"
+      },
+      "plan-2": {
+        "plan-title":"ESSENTIAL",
+        "plan-feature1":"Unlimited MT Characters",
+        "plan-feature2":"Zendesk Integration",
+        "plan-feature3":"API"
+      },
+      "plan-3": {
+        "plan-title":"PRO",
+        "plan-feature1":"Volume discounts",
+        "plan-feature2":"Preferred translators",
+        "plan-feature3":"API"
+      }
+    },
+    "contact-section": {
+      "title":"Do you have a project?",
+      "description-1":"Discuss your project with our team to choose the best solution for translation or localization. Fill a small form and get a 15 min cusomized demo.",
+      "description-2":"Professional human translation, Zendesk Support Integration, and API",
+      "phone":"Phone number: +1 123 4567 890",
+      "email":"Email address: info@translations.com",
+      "action-button-text":"Send message",
+      "validation-rules-text": {
+        "name-error-text-required":"Please enter your name.",
+        "name-error-text-min-6-chars":"Name nust be min 6 characters long.",
+        "name-input-placeholder":"Name",
+        "email-error-required": "E-mail is required.",
+        "email-error-invalid": "Please enter a valid e-mail address.",
+        "email-input-placeholder": "E-mail",
+        "message-error-required":"Message is required.",
+        "message-error-min-10-chars":"Message box must have at least 10 characters.",
+        "message-input-placeholder": "Message"
+      },
+      "snackbar-message-sent-confirmation": "Message sent."
+    },
+    "footer-section": {
+      "message":"We help businesses and individuals to communicate successfully across cultures in the online world",
+      "company": "Translate everything"
     }
   }
 }
