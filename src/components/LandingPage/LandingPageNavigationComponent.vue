@@ -40,7 +40,7 @@
       id="app-bar"
       app
       :flat="!scrolled"
-      class="px-15"
+      class="px-5"
       :class="{ scrolled: scrolled }"
     >
       <v-toolbar-title>

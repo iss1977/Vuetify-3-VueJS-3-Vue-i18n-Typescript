@@ -4,7 +4,7 @@ import { numberFormats } from './rules/numbers';
 import { datetimeFormats } from './rules/datetime';
 
 
-import en from './locales/en.json';
+import { enDictionary as en} from './locales/en';
 import ro from './locales/ro.json';
 
 export enum Locales {
