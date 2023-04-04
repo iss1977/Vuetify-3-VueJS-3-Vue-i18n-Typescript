@@ -1,0 +1,16 @@
+{
+  "landing": {
+    "home-section": {
+      "title": "Next Technology",
+      "description": "blend innovation, passion and expertise to create products and offer services always up to date, focused on current and future needs of customers.",
+      "action-button": "More info"
+    },
+    "features-section": {
+      "feature1": {
+        "title": "Display",
+        "sub-title":"Correctly displayed dates and currencies",
+        "description": "Calendar formats, measurements, phone numbers, currencies and addresses are just a few examples of items that have to be changed in your multilingual app"
+      }
+    }
+  }
+}

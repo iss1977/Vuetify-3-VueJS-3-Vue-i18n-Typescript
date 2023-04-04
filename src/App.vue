@@ -1,6 +1,6 @@
 <template>
   <v-app>
-    <v-main class="bg-grey-lighten-5 pt-0">
+    <v-main class="bg-grey-lighten-5 pt-0 overflow-hidden">
         <router-view></router-view>
     </v-main>
   </v-app>
