@@ -74,10 +74,11 @@
 </template>
 
 <script setup lang="ts">
+import { reactive } from 'vue';
 import { useI18n } from 'vue-i18n';
 const { t } = useI18n({ useScope: 'global' });
 
-const features = [
+const features = reactive([
   {
     img: (new URL("@/assets/icon1.png", import.meta.url).href),
     title: t('landing.features-section.feature1.title'),
@@ -96,7 +97,7 @@ const features = [
     subTitle: t('landing.features-section.feature3.sub-title'),
     text: t('landing.features-section.feature3.description'),
   },
-];
+]);
 
 function scrollTo(elementID: string){
   document?.getElementById(elementID)?.scrollIntoView({block: "start", behavior: "smooth"});

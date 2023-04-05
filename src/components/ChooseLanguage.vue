@@ -1,6 +1,6 @@
 <template>
   <v-select v-model="selected" :items="items" outlined label="Select language" density="comfortable" return-object
-    :hide-details="true" :menu-props="{ closeOnContentClick: true }">
+    :hide-details="true" :menu-props="{ closeOnContentClick: true }" light>
     <template v-slot:item="{ item, props }">
       <v-list-item :title="item.title" @click="updateLanguage(item.value)" lines="one" density="compact">
         <template v-slot:prepend>

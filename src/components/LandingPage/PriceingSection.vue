@@ -145,7 +145,7 @@ ul {
 }
 </style>
 
-<style scoped>
+<style scoped lang="scss">
 .header {
   background-color: #283e79;
   color: white;
@@ -188,6 +188,7 @@ ul {
 
 #pricing {
   z-index: 0;
+  scroll-margin-top: 50px; // used by programatic scrolling
 }
 
 .content {

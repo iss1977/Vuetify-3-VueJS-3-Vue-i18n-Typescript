@@ -33,6 +33,9 @@
               {{text}}</v-list-item-title>
         </v-list-item>
       </v-list>
+      <v-responsive max-width="250" class="text-white mx-3">
+        <ChooseLanguage/>
+      </v-responsive>
     </v-navigation-drawer>
 
 
@@ -53,23 +56,29 @@
         v-if="isXs"
         color="white"
       />
-      <div v-else class="text-white">
-        <v-btn text @click="">
-          <span class="mr-2">Home</span>
+      <div v-else class="text-white d-flex align-center">
+        <v-btn variant="text" :to="link">
+          <v-icon icon="mdi-home"></v-icon>
+          <span class="mx-2">Home</span>
         </v-btn>
-        <v-btn text @click="">
+        <v-btn  variant="text" @click="scrollTo('features')">
           <span class="mr-2">Sobre</span>
         </v-btn>
-        <v-btn text @click="">
+        <v-btn variant="text" @click="scrollTo('download')">
           <span class="mr-2">Download</span>
         </v-btn>
-        <v-btn text @click="">
+        <v-btn variant="text" @click="scrollTo('pricing')">
           <span class="mr-2">Preços</span>
         </v-btn>
-        <v-btn rounded outlined text @click="">
+        <v-btn variant="text" @click="scrollTo('contact')">
           <span class="mr-2">Contate-nos</span>
         </v-btn>
+        <v-responsive max-width="250" class="text-white mx-3">
+          <ChooseLanguage/>
+        </v-responsive>
       </div>
+
+      
     </v-app-bar>
 
 
@@ -80,6 +89,7 @@
 
 <script setup lang="ts">
 import { ref, onMounted } from 'vue';
+import ChooseLanguage from '../ChooseLanguage.vue';
 
 const props = defineProps({
   scrolled: {
@@ -95,27 +105,33 @@ console.log('props.scrolled', props)
 
 const drawer = ref(false);
 const isXs = ref(false);
-    const items=  [
-      ["mdi-home-outline", "Home", "#hero"],
-      ["mdi-information-outline", "Sobre", "#features"],
-      ["mdi-download-box-outline", "Download", "#download"],
-      ["mdi-currency-usd", "Preços", "#pricing"],
-      ["mdi-email-outline", "Contatos", "#contact"],
-    ];
+const items=  [
+  ["mdi-home-outline", "Home", "#hero"],
+  ["mdi-information-outline", "Sobre", "#features"],
+  ["mdi-download-box-outline", "Download", "#download"],
+  ["mdi-currency-usd", "Preços", "#pricing"],
+  ["mdi-email-outline", "Contatos", "#contact"],
+];
 
+  const link = '/';
 
 
 const color = "transparent"
 const flat = false;
 
 function onResize(){
-  isXs.value = window.innerWidth < 850;
+  isXs.value = window.innerWidth < 950;
 };
 
 onMounted( () => {
   onResize();
   window.addEventListener("resize", onResize, { passive: true });
 });
+
+function scrollTo(elementID: string){
+  document?.getElementById(elementID)?.scrollIntoView({block: "start", behavior: "smooth"});
+}
+
 
 </script>
 

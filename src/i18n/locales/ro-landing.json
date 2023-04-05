@@ -1,0 +1,83 @@
+{
+  "landing": {
+    "home-section": {
+      "title": "Technologia viitorului",
+      "description": "îmbină inovația, pasiunea și expertiza pentru a crea produse și a oferi servicii mereu la zi, concentrate pe nevoile actuale și viitoare ale clienților.",
+      "action-button": "Mai multe informații"
+    },
+    "features-section": {
+      "feature1": {
+        "title": "Interfața cu utilizatorul",
+        "sub-title":"Adaptat la fiecare versiune lingvistică",
+        "description": "Aceasta înseamnă că nu ar trebui să existe text trunchiat în aplicația dvs. și suficient spațiu alb pentru a face produsul să fie ușor de citit. Este o practică bună să ajustați toate elementele UI care conțin text la noua versiune lingvistică, de ex. redimensionați butoanele, casetele sau meniurile. Culorile pot trebui și ele ajustate, deoarece semnificația lor variază de la o cultură la alta."
+      },
+      "feature2": {
+        "title": "Afişaj",
+        "sub-title":"Date și monede afișate corect",
+        "description": "Formatele de calendar, măsurătorile, numerele de telefon, monedele și adresele sunt doar câteva exemple de elemente care trebuie modificate în aplicația dvs. multilingvă"
+      },
+      "feature3": {
+        "title": "Pictograme clare",
+        "sub-title":"Simboluri care transmit mesajul potrivit",
+        "description": "Nu există nimic mai confuz decât imaginile care nu au nimic de-a face cu conținutul sau reflectă mesajul care nu poate fi înțeles clar. Înainte de a utiliza o pictogramă sau un simbol în locul numelui unui buton sau al oricărui alt element, asigurați-vă că este adecvat în cultura țintă și că nu vă insultă utilizatorii."
+      }
+    },
+    "about-section": {
+      "title": "Beneficiile aplicației multilingve",
+      "sub-title": "și cum să le creați",
+      "description-1":"Localizarea ajută la traducerea aplicației în mai multe limbi noi. Necesită puțină planificare avansată și este un instrument excelent pentru extinderea pe o piață externă. Mesajele pot fi rafinate pentru a satisface nevoile publicului și depășesc un simplu proces de traducere.",
+      "description-2":"Data, ora, moneda și alți factori relevanți ar trebui să aibă prioritate în timpul localizării. Ele trebuie să fie specifice cu distanțele geografice împreună cu conținutul. Personalizarea tastaturii este o necesitate.",
+      "description-3":"Traducerea aplicațiilor dintr-o limbă în alta necesită multă perseverență. Nu este vorba doar despre traducerea cuvintelor, ci la fel de important este oferirea unei experiențe care îmbibă valori culturale."
+    },
+    "download-section": {
+      "title": "Testare software",
+      "text": "Software-ul localizat trebuie testat riguros ca și software-ul original în limba engleză. Nu doriți să vedeți o limbă străină „în afara contextului” în software-ul dvs."
+    },
+    "pricing-section": {
+      "title":"Prețuri",
+      "action-button-text":"Comandați acum",
+      "plan-1": {
+        "plan-title":"START",
+        "plan-feature1":"Fără plată lunară",
+        "plan-feature2":"Cuvinte nelimitate",
+        "plan-feature3":"API"
+      },
+      "plan-2": {
+        "plan-title":"ESENŢIAL",
+        "plan-feature1":"Caractere MT nelimitate",
+        "plan-feature2":"Integrare Zendesk",
+        "plan-feature3":"API"
+      },
+      "plan-3": {
+        "plan-title":"PRO",
+        "plan-feature1":"Reduceri de volum",
+        "plan-feature2":"Traducători preferați",
+        "plan-feature3":"API"
+      }
+    },
+    "contact-section": {
+      "title":"Ai un proiect?",
+      "description-1":"Discutați proiectul dvs. cu echipa noastră pentru a alege cea mai bună soluție pentru traducere sau localizare. Completați un formular mic și obțineți o demonstrație personalizată de 15 minute.",
+      "description-2":"Traducere umană profesională, Zendesk Support Integration și API",
+      "phone":"Număr de telefon: +1 123 4567 890",
+      "email":"Adresa de e-mail: info@translations.com",
+      "action-button-text":"Trimite mesaj",
+      "validation-rules-text": {
+        "name-error-text-required":"Te rog scrieti numele.",
+        "name-error-text-min-6-chars":"Numele trebuie să aibă minimum 6 caractere.",
+        "name-input-placeholder":"Nume",
+        "email-error-required": "E-mailul este necesar.",
+        "email-error-invalid": "Vă rugăm să introduceți o adresă de email validă.",
+        "email-input-placeholder": "E-mail",
+        "message-error-required":"Mesajul este obligatoriu.",
+        "message-error-min-10-chars":"Caseta de mesaj trebuie să aibă cel puțin 10 caractere.",
+        "message-input-placeholder": "Mesaj"
+      },
+      "snackbar-message-sent-confirmation": "Mesaj trimis."
+    },
+    "footer-section": {
+      "message":"Ajutăm companiile și persoanele fizice să comunice cu succes între culturi în lumea online",
+      "company": "Traduceți totul"
+    }
+  }
+}
