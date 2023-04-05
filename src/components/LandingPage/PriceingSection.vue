@@ -145,7 +145,7 @@ ul {
 }
 </style>
 
-<style scoped>
+<style scoped lang="scss">
 .header {
   background-color: #283e79;
   color: white;
@@ -188,6 +188,7 @@ ul {
 
 #pricing {
   z-index: 0;
+  scroll-margin-top: 50px; // used by programatic scrolling
 }
 
 .content {
@@ -209,83 +210,6 @@ import { computed } from 'vue';
 import { DisplayInstance, useDisplay } from 'vuetify';
 
 
-
-const planos = [
-      {
-        title: "Básico",
-        price: "R$100,00",
-        img: "f1.png",
-        features: [
-          {
-            icon: { text: "mdi-check", color: "success"},
-            text: "Feature 1",
-          },
-          {
-            icon: { text: "mdi-check", color: "success" },
-            text: "Feature 2",
-          },
-          {
-            icon: { text: "mdi-cancel",  color: "red" },
-            text: "Feature 3",
-          },
-          {
-            icon: { text: "mdi-cancel", color: "red" },
-            text: "Feature 4",
-          },
-        ],
-      },
-      {
-        title: "Padrão",
-        price: "R$150,00",
-        img: "f2.png",
-        features: [
-          {
-            icon: { text: "mdi-check",  color: "success" },
-            text: "Feature 1",
-            color: "success",
-          },
-          {
-            icon: { text: "mdi-check", color: "success" },
-            text: "Feature 2",
-          },
-          {
-            icon: { text: "mdi-check",  color: "success" },
-            text: "Feature 3",
-            color: "success",
-          },
-          {
-            icon: {  text: "mdi-cancel", color: "red" },
-            text: "Feature 4",
-          },
-        ],
-      },
-      {
-        title: "Premium",
-        price: "R$250,00",
-        img: "f3.png",
-        features: [
-          {
-            icon: { text: "mdi-check",  color: "success" },
-            text: "Feature 1",
-            color: "success",
-          },
-          {
-            icon: { text: "mdi-check", color: "success" },
-            text: "Feature 2",
-          },
-          {
-            icon: { text: "mdi-check", color: "success" },
-            text: "Feature 3",
-            color: "success",
-          },
-          {
-            icon: { text: "mdi-check", color: "success" },
-            text: "Feature 4",
-            color: "success",
-          },
-        ],
-      },
-    ];
   
 // const size = computed( () => {
 //   const currentSize = {md: "large", xl: "x-large"}[this.$vuetify.breakpoint.name];

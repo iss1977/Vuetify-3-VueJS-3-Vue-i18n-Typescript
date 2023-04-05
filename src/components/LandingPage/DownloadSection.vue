@@ -26,7 +26,7 @@
   </section>
 </template>
 
-<style scoped>
+<style scoped lang="scss">
 #download {
   background-image: url("@/assets/bgDownload.jpg");
   background-attachment: fixed;
@@ -34,6 +34,7 @@
   background-size: cover;
   background-position: center;
   height: 500px;
+  scroll-margin-top: 100px; // used by programatic scrolling
 }
 
 #download .container,

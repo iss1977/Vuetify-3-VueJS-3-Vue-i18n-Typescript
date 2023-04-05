@@ -83,9 +83,10 @@
   </section>
 </template>
 
-<style scoped>
+<style scoped lang="scss">
 #contact {
   background-color: #f4f7f5;
+  scroll-margin-top: 50px; // used by programatic scrolling
 }
 
 .svg-border-waves {

@@ -1,5 +1,14 @@
 {
   "landing": {
+    "navigation":{
+      "app-title":"Demo Page",
+      "app-subtitle":"Web",
+      "home":"Home",
+      "about":"About",
+      "download":"Download",
+      "priceing": "Priceing",
+      "contact":"Contact"
+    },
     "home-section": {
       "title": "Next Technology",
       "description": "blend innovation, passion and expertise to create products and offer services always up to date, focused on current and future needs of customers.",
@@ -60,7 +69,7 @@
       "description-1":"Discuss your project with our team to choose the best solution for translation or localization. Fill a small form and get a 15 min cusomized demo.",
       "description-2":"Professional human translation, Zendesk Support Integration, and API",
       "phone":"Phone number: +1 123 4567 890",
-      "email":"Email address: info@translations.com",
+      "email":"Email address: info{'@'}translations.com",
       "action-button-text":"Send message",
       "validation-rules-text": {
         "name-error-text-required":"Please enter your name.",
