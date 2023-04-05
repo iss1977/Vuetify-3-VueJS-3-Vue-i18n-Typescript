@@ -5,7 +5,8 @@ import { datetimeFormats } from './rules/datetime';
 
 
 import { enDictionary as en} from './locales/en';
-import ro from './locales/ro.json';
+import { roDictionary as ro} from './locales/ro';
+
 
 export enum Locales {
   EN = 'en',

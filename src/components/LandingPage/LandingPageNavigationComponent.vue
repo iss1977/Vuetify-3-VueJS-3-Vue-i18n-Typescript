@@ -12,8 +12,8 @@
         <v-list-item
            prepend-avatar="@/assets/logo.png"
         >
-            <v-list-item-title class="title">Calango</v-list-item-title>
-            <v-list-item-subtitle>WEB</v-list-item-subtitle>
+            <v-list-item-title class="title">{{ $t('landing.navigation.app-title')}}</v-list-item-title>
+            <v-list-item-subtitle>{{ $t('landing.navigation.app-subtitle')}}</v-list-item-subtitle>
         </v-list-item>
       </v-list>
 
@@ -21,18 +21,23 @@
 
       <v-list dense>
         <v-list-item
-          v-for="([icon, text, link], i) in items"
-          :key="i"
+          v-for="(item, index) in items"
+          :key="index"
           link
-          @click=""
+          :to="item.toLink"
+          @click="scrollTo(item.scrollToId)"
         >
           <template v-slot:prepend>
-            <v-icon>{{ icon }}</v-icon>
+            <v-icon>{{ item.icon }}</v-icon>
           </template>
             <v-list-item-title class="subtitile-1">
-              {{text}}</v-list-item-title>
+              {{item.displayText}}
+            </v-list-item-title>
         </v-list-item>
       </v-list>
+      <v-responsive max-width="250" class="text-white mx-3">
+        <ChooseLanguage/>
+      </v-responsive>
     </v-navigation-drawer>
 
 
@@ -53,23 +58,24 @@
         v-if="isXs"
         color="white"
       />
-      <div v-else class="text-white">
-        <v-btn text @click="">
-          <span class="mr-2">Home</span>
-        </v-btn>
-        <v-btn text @click="">
-          <span class="mr-2">Sobre</span>
-        </v-btn>
-        <v-btn text @click="">
-          <span class="mr-2">Download</span>
-        </v-btn>
-        <v-btn text @click="">
-          <span class="mr-2">Preços</span>
-        </v-btn>
-        <v-btn rounded outlined text @click="">
-          <span class="mr-2">Contate-nos</span>
+      <div class="text-white d-flex align-center"
+        v-else
+        v-for="(item, index) in items"
+        :key="index"
+      >
+        <v-btn variant="text" 
+          :to="item.toLink"
+          @click="scrollTo(item.scrollToId)"
+        >
+          <v-icon :icon="item.icon"></v-icon>
+          <span class="mx-2">{{ item.displayText}}</span>
         </v-btn>
       </div>
+      <v-responsive v-if="!isXs" max-width="250" class="text-white mx-3">
+        <ChooseLanguage/>
+      </v-responsive>
+
+      
     </v-app-bar>
 
 
@@ -80,6 +86,7 @@
 
 <script setup lang="ts">
 import { ref, onMounted } from 'vue';
+import ChooseLanguage from '../ChooseLanguage.vue';
 
 const props = defineProps({
   scrolled: {
@@ -95,27 +102,42 @@ console.log('props.scrolled', props)
 
 const drawer = ref(false);
 const isXs = ref(false);
-    const items=  [
-      ["mdi-home-outline", "Home", "#hero"],
-      ["mdi-information-outline", "Sobre", "#features"],
-      ["mdi-download-box-outline", "Download", "#download"],
-      ["mdi-currency-usd", "Preços", "#pricing"],
-      ["mdi-email-outline", "Contatos", "#contact"],
-    ];
 
+interface Items {
+  icon: string;
+  displayText: string;
+  toLink: string;
+  scrollToId: string
+}
+const items: Items[]=  [
+  {icon: "mdi-home-outline", displayText: "Home", toLink:"/", scrollToId: ""},
+  {icon: "mdi-information-outline", displayText: "About", toLink:"", scrollToId: "features"},
+  {icon: "mdi-download-box-outline", displayText: "Download", toLink:"", scrollToId: "download"},
+  {icon: "mdi-currency-usd", displayText: "Priceing", toLink:"", scrollToId: "pricing"},
+  {icon: "mdi-email-outline", displayText: "Contact", toLink:"", scrollToId: "contact"},
+];
+
+  const link = '/';
 
 
 const color = "transparent"
 const flat = false;
 
 function onResize(){
-  isXs.value = window.innerWidth < 850;
+  isXs.value = window.innerWidth < 950;
 };
 
 onMounted( () => {
   onResize();
   window.addEventListener("resize", onResize, { passive: true });
 });
+
+function scrollTo(elementID: string){
+  if (!elementID) return;
+  document?.getElementById(elementID)?.scrollIntoView({block: "start", behavior: "smooth"});
+  drawer.value = false;
+}
+
 
 </script>
 
