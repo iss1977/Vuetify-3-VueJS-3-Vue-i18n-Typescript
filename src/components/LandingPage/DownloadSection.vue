@@ -34,7 +34,7 @@
   background-size: cover;
   background-position: center;
   height: 500px;
-  scroll-margin-top: 50px; // used by programatic scrolling
+  scroll-margin-top: 100px; // used by programatic scrolling
 }
 
 #download .container,

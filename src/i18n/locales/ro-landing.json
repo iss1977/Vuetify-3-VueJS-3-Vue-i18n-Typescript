@@ -1,5 +1,14 @@
 {
   "landing": {
+    "navigation":{
+      "app-title":"Demo Page",
+      "app-subtitle":"Web",
+      "home":"Acasa",
+      "about":"Despre",
+      "download":"Descarcă",
+      "priceing": "Prețuri",
+      "contact":"Contact"
+    },
     "home-section": {
       "title": "Technologia viitorului",
       "description": "îmbină inovația, pasiunea și expertiza pentru a crea produse și a oferi servicii mereu la zi, concentrate pe nevoile actuale și viitoare ale clienților.",
@@ -60,7 +69,7 @@
       "description-1":"Discutați proiectul dvs. cu echipa noastră pentru a alege cea mai bună soluție pentru traducere sau localizare. Completați un formular mic și obțineți o demonstrație personalizată de 15 minute.",
       "description-2":"Traducere umană profesională, Zendesk Support Integration și API",
       "phone":"Număr de telefon: +1 123 4567 890",
-      "email":"Adresa de e-mail: info@translations.com",
+      "email":"Adresa de e-mail: info{'@'}translations.com",
       "action-button-text":"Trimite mesaj",
       "validation-rules-text": {
         "name-error-text-required":"Te rog scrieti numele.",
