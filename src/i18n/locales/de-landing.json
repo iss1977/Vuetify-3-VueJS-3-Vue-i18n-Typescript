@@ -1,0 +1,92 @@
+{
+  "landing": {
+    "navigation":{
+      "app-title":"Demo-Seite",
+      "app-subtitle":"Web",
+      "home":"Startseite",
+      "about":"Info-Seite",
+      "download":"Herunterladen",
+      "priceing": "Preisgestaltung",
+      "contact":"Kontakt"
+    },
+    "home-section": {
+      "title": "Nächste Technologie",
+      "description": "vereinen Innovation, Leidenschaft und Know-how, um Produkte zu entwickeln und Dienstleistungen anzubieten, die immer auf dem neuesten Stand sind und sich auf die aktuellen und zukünftigen Bedürfnisse der Kunden konzentrieren.",
+      "action-button": "Mehr Info"
+    },
+    "features-section": {
+      "feature1": {
+        "title": "Benutzeroberfläche",
+        "sub-title":"Angepasst an jede einzelne Sprachversion",
+        "description": "Das bedeutet, dass Ihre Anwendung keinen abgeschnittenen Text und genügend Leerraum enthalten sollte, damit Ihr Produkt gut lesbar ist. Es ist eine gute Praxis, alle UI-Elemente, die Text enthalten, an die neue Sprachversion anzupassen, z. Ändern Sie die Größe von Schaltflächen, Feldern oder Menüs. Auch Farben müssen möglicherweise angepasst werden, da ihre Bedeutung von Kultur zu Kultur unterschiedlich ist."
+      },
+      "feature2": {
+        "title": "Anzeige",
+        "sub-title":"Korrekt angezeigte Daten und Währungen",
+        "description": "Kalenderformate, Maße, Telefonnummern, Währungen und Adressen sind nur einige Beispiele für Elemente, die in Ihrer mehrsprachigen App geändert werden müssen."
+      },
+      "feature3": {
+        "title": "Klare Symbole",
+        "sub-title":"Symbole, die die richtige Botschaft vermitteln",
+        "description": "Nichts ist verwirrender als Bilder, die nichts mit dem Inhalt zu tun haben oder die Botschaft widerspiegeln, die nicht klar verstanden werden kann. Bevor Sie ein Symbol oder Symbol anstelle eines Schaltflächennamens oder eines anderen Elements verwenden, stellen Sie sicher, dass es in der Zielkultur angemessen ist und Ihre Benutzer nicht beleidigt."
+      }
+    },
+    "about-section": {
+      "title": "Vorteile der mehrsprachigen App",
+      "sub-title": "und wie man sie erstellt",
+      "description-1":"Die Lokalisierung hilft bei der Übersetzung der App in mehrere neue Sprachen. Es erfordert ein wenig Vorausplanung und ist ein großartiges Werkzeug für die Expansion in einen ausländischen Markt. Nachrichten können verfeinert werden, um den Bedürfnissen des Publikums gerecht zu werden, und gehen über einen einfachen Übersetzungsprozess hinaus.",
+      "description-2":"Datum, Uhrzeit, Währung und andere relevante Faktoren sollten bei der Lokalisierung priorisiert werden. Sie müssen mit den geografischen Entfernungen zusammen mit dem Inhalt spezifisch sein. Anpassen der Tastatur ist ein Muss.",
+      "description-3":"Das Übersetzen von Apps von einer Sprache in eine andere erfordert viel Ausdauer. Es geht nicht nur darum, die Wörter zu übersetzen, sondern ebenso wichtig ist es, ein Erlebnis zu bieten, das kulturelle Werte aufnimmt."
+    },
+    "download-section": {
+      "title": "Softwaretest",
+      "text": "Lokalisierte Software muss streng wie die englische Originalsoftware getestet werden. Sie möchten in Ihrer Software keine Fremdsprache „aus dem Kontext gerissen“ sehen."
+    },
+    "pricing-section": {
+      "title":"Preisgestaltung",
+      "action-button-text":"Jetzt bestellen",
+      "plan-1": {
+        "plan-title":"START",
+        "plan-feature1":"Keine monatliche Zahlung",
+        "plan-feature2":"Unbegrenzte Worte",
+        "plan-feature3":"API"
+      },
+      "plan-2": {
+        "plan-title":"ESSENTIELL",
+        "plan-feature1":"Unbegrenzte MT-Zeichen",
+        "plan-feature2":"Zendesk-Integration",
+        "plan-feature3":"API"
+      },
+      "plan-3": {
+        "plan-title":"PROFI",
+        "plan-feature1":"Massenrabatt",
+        "plan-feature2":"Bevorzugte Übersetzer",
+        "plan-feature3":"API"
+      }
+    },
+    "contact-section": {
+      "title":"Haben Sie ein Projekt?",
+      "description-1":"Besprechen Sie Ihr Projekt mit unserem Team, um die beste Lösung für die Übersetzung oder Lokalisierung auszuwählen. Füllen Sie ein kleines Formular aus und erhalten Sie eine 15-minütige benutzerdefinierte Demo.",
+      "description-2":"Professionelle menschliche Übersetzung, Zendesk Support-Integration und API",
+      "phone":"Telefonnummer: +1 123 4567 890",
+      "email":"E-Mail-Addresse: info{'@'}translations.com",
+      "action-button-text":"Nachricht senden",
+      "validation-rules-text": {
+        "name-error-text-required":"Bitte geben Sie Ihren Namen ein.",
+        "name-error-text-min-6-chars":"Der Name muss mindestens 6 Zeichen lang sein.",
+        "name-input-placeholder":"Name",
+        "email-error-required": "E-Mail ist erforderlich.",
+        "email-error-invalid": "Bitte geben Sie eine gültige E-Mail-Adresse ein.",
+        "email-input-placeholder": "E-mail",
+        "message-error-required":"Nachricht ist erforderlich.",
+        "message-error-min-10-chars":"Das Nachrichtenfeld muss mindestens 10 Zeichen lang sein.",
+        "message-input-placeholder": "Nachricht"
+      },
+      "snackbar-message-sent-confirmation": "Nachricht gesendet."
+    },
+    "footer-section": {
+      "message":"Wir helfen Unternehmen und Einzelpersonen dabei, in der Online-Welt erfolgreich interkulturell zu kommunizieren",
+      "company": "Alles übersetzen"
+    }
+  }
+}
