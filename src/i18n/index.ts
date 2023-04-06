@@ -3,11 +3,11 @@ import type { MessageSchema, NumberSchema } from './schema';
 import { numberFormats } from './rules/numbers';
 import { datetimeFormats } from './rules/datetime';
 
-
 import { enDictionary as en} from './locales/en';
 import { roDictionary as ro} from './locales/ro';
 import { deDictionary as de} from './locales/de';
 
+import { savedLocale } from '@/tools/storageLocale';
 
 export enum Locales {
   EN = 'en',
@@ -27,7 +27,8 @@ const messages = {
   [Locales.RO]: ro
 }
 
-export const defaultLocale = import.meta.env.VITE_DEFAULT_LOCALE;
+
+export const defaultLocale = savedLocale.language || import.meta.env.VITE_DEFAULT_LOCALE;
 
 export const i18n = createI18n<{message: MessageSchema, number: NumberSchema}, 'en' | 'ro' | 'de' , false >({
   globalInjection: true,
