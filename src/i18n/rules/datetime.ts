@@ -34,6 +34,14 @@ const roShortDateTimeFormatOptions: Intl.DateTimeFormatOptions = {
   minute: "numeric",
   second: "numeric",
 }
+const deShortDateTimeFormatOptions: Intl.DateTimeFormatOptions = {
+  year: "numeric" ,
+  month: "numeric",
+  day: "numeric" ,
+  hour: "numeric",
+  minute: "numeric",
+  second: "numeric",
+}
 
 const enLongDateTimeFormatOptions: Intl.DateTimeFormatOptions = {
   year: "numeric" ,
@@ -44,6 +52,15 @@ const enLongDateTimeFormatOptions: Intl.DateTimeFormatOptions = {
   second: "numeric",
 }
 const roLongDateTimeFormatOptions: Intl.DateTimeFormatOptions = {
+  weekday: "long",
+  year: "numeric" ,
+  month: "long",
+  day: "numeric" ,
+  hour: "2-digit",
+  minute: "2-digit",
+  second: "2-digit",
+}
+const deLongDateTimeFormatOptions: Intl.DateTimeFormatOptions = {
   weekday: "long",
   year: "numeric" ,
   month: "long",
@@ -63,8 +80,13 @@ const roDateTimeFormat: DateTimeFormat = {
   short : roShortDateTimeFormatOptions,
   long: roLongDateTimeFormatOptions
 }
+const deDateTimeFormat: DateTimeFormat = {
+  short : deShortDateTimeFormatOptions,
+  long: deLongDateTimeFormatOptions
+}
 
-export const datetimeFormats: DateTimeFormats<DateTimeFormat, 'en' | 'ro'> = {
+export const datetimeFormats: DateTimeFormats<DateTimeFormat, 'en' | 'ro' | 'de'> = {
   en: enDateTimeFormat,
   ro: roDateTimeFormat,
+  de: deDateTimeFormat,
 }

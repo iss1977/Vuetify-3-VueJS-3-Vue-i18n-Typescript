@@ -1,0 +1,40 @@
+{
+  "date_picker":{
+    "days":["Mo","Di","Mi","Do","Fr","Sa","So"],
+    "ok": "Auswählen",
+    "cancel": "Abbrechen",
+    "select_date": "Datum auswählen",
+    "selected_date_is":"Ausgewähltes Datum ist",
+    "sample_dates_long_short": "Beispieldaten in Kurz- und Protokollformaten",
+    "short_date_text": "Kurzes Datum",
+    "long_date_text": "Langes Datum",
+    "long_date_time_format_text":"Langes Datums-/Uhrzeitformat",
+    "translation_using_i18n-d_tag": "Übersetzung mit i18n-d-Tag"
+  },
+  "nav": {
+    "home": "Startseite",
+    "about": "Etwas über",
+    "landing": "Landeseite"
+  },
+"sheet_title": {
+  "translations": "Nachrichten - Landessprache",
+  "numbers": "Zahlen"
+  },
+"hello_world": {
+  "title": "Hallo von Vuetify 3 Internationalisierung!"
+  },
+"home": {
+  "header": "Tada! Dieser Absatz wird mit Vue I18n in Ihre bevorzugte Sprache übersetzt",
+  "translation_via_script": "Der folgende Text: \"{translated}\" wurde im Skriptabschnitt übersetzt.",
+  "change_language_hint": "Sie können die Sprache auch ändern, während die {app_name} App ausgeführt wird",
+  "multiple_local_messages": "Mehrere lokale Nachrichten können wie hier verwendet werden: {msg1} or {msg2}",
+  "button_description": "Die Taste",
+  "button_clicks": " wurde nicht angeklickt | wurde einmal angeklickt | wurde {count} mal angeklickt"
+  },
+"about": {
+  "header": "Dies ist die About-Seite"
+  },
+"donations": {
+  "raised_amount": "Das aktuelle Wohltätigkeitsprogramm hat {donations} von den Teilnehmern gesammelt"
+  }
+}
