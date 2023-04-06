@@ -27,6 +27,7 @@
 
 <script setup lang="ts">
 
+import { savedLocale } from '@/tools/storageLocale';
 import { Ref, onUpdated, ref } from 'vue';
 import { useI18n } from 'vue-i18n';
 const t = useI18n();
@@ -59,6 +60,7 @@ const selected:  Ref<ItemType> = ref<ItemType>(items[0])
 const updateLanguage = (event: ItemType) => {
   selected.value = event
   t.locale.value = event.value;
+  savedLocale.language = event.value; // save to localStorage
 }
 
 // set the v-select to the current langguage
