@@ -13,7 +13,7 @@
     </template>
 
     <template v-slot:selection>
-      <v-img class="bg-white align-self-center mr-3" width="20" height="15" :aspect-ratio="4 / 3"
+      <v-img class="bg-white align-self-center mr-3" width="20" height="15" aspect-ratio="4 / 3"
         :src="selected.img" cover 
       ></v-img>
       <span>
@@ -27,7 +27,7 @@
 
 <script setup lang="ts">
 
-import { Ref, ref } from 'vue';
+import { Ref, onUpdated, ref } from 'vue';
 import { useI18n } from 'vue-i18n';
 const t = useI18n();
 
@@ -39,24 +39,36 @@ type ItemType = {
 
 const items: ItemType[] = [
   {
-    title: "Romana",
-    value: "ro",
-    img: '/src/assets/flag-ro.svg'
-  },
-  {
     title: "English",
     value: "en",
     img: '/src/assets/flag-gb.svg'
-  }
+  },
+  {
+    title: "Deutsch",
+    value: "de",
+    img: '/src/assets/flag-de.svg'
+  },
+  {
+    title: "Româna",
+    value: "ro",
+    img: '/src/assets/flag-ro.svg'
+  },
 ]
 const selected:  Ref<ItemType> = ref<ItemType>(items[0])
 
 const updateLanguage = (event: ItemType) => {
   selected.value = event
-  console.log(event)
-  
   t.locale.value = event.value;
 }
+
+// set the v-select to the current langguage
+onUpdated(() => {
+  console.log(t.locale.value)
+  const found = items.find( (item) => item.value===t.locale.value)
+  selected.value = found ? found : selected.value;
+});
+
+
 </script>
 
 <style>
