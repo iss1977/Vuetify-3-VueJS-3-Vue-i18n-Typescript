@@ -6,6 +6,7 @@
     "select_date": "Datum auswählen",
     "selected_date_is":"Ausgewähltes Datum ist",
     "sample_dates_long_short": "Beispieldaten in Kurz- und Protokollformaten",
+    "short_date_time_text": "Kurzes Datum mit Uhrzeit",
     "short_date_text": "Kurzes Datum",
     "long_date_text": "Langes Datum",
     "long_date_time_format_text":"Langes Datums-/Uhrzeitformat",

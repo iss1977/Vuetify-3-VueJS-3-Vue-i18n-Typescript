@@ -6,6 +6,7 @@
     "select_date": "Alege data",
     "selected_date_is":"Data aleasa este",
     "sample_dates_long_short": "Exemple pentru data in format lung si scurt",
+    "short_date_time_text": "Format scurt cu oră",
     "short_date_text": "Format scurt",
     "long_date_text": "Format detaliat",
     "long_date_time_format_text":"Format data si ora",

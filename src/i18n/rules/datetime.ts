@@ -17,32 +17,7 @@ import { DateTimeFormats, DateTimeFormat } from '@intlify/core-base';
 //   timeZone?: string | undefined;
 // }
 
-
-const enShortDateTimeFormatOptions: Intl.DateTimeFormatOptions = {
-  year: "numeric" ,
-  month: "numeric",
-  day: "numeric" ,
-  hour: "numeric",
-  minute: "numeric",
-  second: "numeric",
-}
-const roShortDateTimeFormatOptions: Intl.DateTimeFormatOptions = {
-  year: "numeric" ,
-  month: "numeric",
-  day: "numeric" ,
-  hour: "numeric",
-  minute: "numeric",
-  second: "numeric",
-}
-const deShortDateTimeFormatOptions: Intl.DateTimeFormatOptions = {
-  year: "numeric" ,
-  month: "numeric",
-  day: "numeric" ,
-  hour: "numeric",
-  minute: "numeric",
-  second: "numeric",
-}
-
+// ENGLISH
 const enLongDateTimeFormatOptions: Intl.DateTimeFormatOptions = {
   year: "numeric" ,
   month: "numeric",
@@ -51,6 +26,21 @@ const enLongDateTimeFormatOptions: Intl.DateTimeFormatOptions = {
   minute: "numeric",
   second: "numeric",
 }
+const enShortDateTimeFormatOptions: Intl.DateTimeFormatOptions = {
+  year: "numeric" ,
+  month: "numeric",
+  day: "numeric" ,
+  hour: "numeric",
+  minute: "numeric",
+  second: "numeric",
+}
+const enShortDateFormatOptions: Intl.DateTimeFormatOptions = {
+  year: "numeric" ,
+  month: "numeric",
+  day: "numeric" ,
+}
+
+// ROMANIAN
 const roLongDateTimeFormatOptions: Intl.DateTimeFormatOptions = {
   weekday: "long",
   year: "numeric" ,
@@ -60,6 +50,21 @@ const roLongDateTimeFormatOptions: Intl.DateTimeFormatOptions = {
   minute: "2-digit",
   second: "2-digit",
 }
+const roShortDateTimeFormatOptions: Intl.DateTimeFormatOptions = {
+  year: "numeric" ,
+  month: "numeric",
+  day: "numeric" ,
+  hour: "numeric",
+  minute: "numeric",
+  second: "numeric",
+}
+const roShortDateFormatOptions: Intl.DateTimeFormatOptions = {
+  year: "numeric" ,
+  month: "numeric",
+  day: "numeric" ,
+}
+
+//GERMAN
 const deLongDateTimeFormatOptions: Intl.DateTimeFormatOptions = {
   weekday: "long",
   year: "numeric" ,
@@ -69,20 +74,40 @@ const deLongDateTimeFormatOptions: Intl.DateTimeFormatOptions = {
   minute: "2-digit",
   second: "2-digit",
 }
+const deShortDateTimeFormatOptions: Intl.DateTimeFormatOptions = {
+  year: "numeric" ,
+  month: "numeric",
+  day: "numeric" ,
+  hour: "numeric",
+  minute: "numeric",
+  second: "numeric",
+}
+const deShortDateFormatOptions: Intl.DateTimeFormatOptions = {
+  year: "numeric" ,
+  month: "numeric",
+  day: "numeric" ,
+}
 
 
+/**
+ * Define formats:
+ * Usage in templates example: $d(date,'shortOnlyDate')
+ */
 const enDateTimeFormat: DateTimeFormat = {
   short : enShortDateTimeFormatOptions,
-  long: enLongDateTimeFormatOptions
+  long: enLongDateTimeFormatOptions,
+  shortOnlyDate: enShortDateFormatOptions,
 }
 
 const roDateTimeFormat: DateTimeFormat = {
   short : roShortDateTimeFormatOptions,
-  long: roLongDateTimeFormatOptions
+  long: roLongDateTimeFormatOptions,
+  shortOnlyDate: roShortDateFormatOptions,
 }
 const deDateTimeFormat: DateTimeFormat = {
   short : deShortDateTimeFormatOptions,
-  long: deLongDateTimeFormatOptions
+  long: deLongDateTimeFormatOptions,
+  shortOnlyDate: deShortDateFormatOptions,
 }
 
 export const datetimeFormats: DateTimeFormats<DateTimeFormat, 'en' | 'ro' | 'de'> = {

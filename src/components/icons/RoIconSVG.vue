@@ -1,6 +1,6 @@
 <template>
   <div>
-    <svg xmlns="http://www.w3.org/2000/svg" id="flag-icons-ro" viewBox="0 0 640 480" preserveAspectRatio="1"
+    <svg xmlns="http://www.w3.org/2000/svg" id="flag-icons-ro" viewBox="0 0 640 480" preserveAspectRatio="xMidYMid"
       v-bind="$attrs">
       <g fill-rule="evenodd" stroke-width="1pt">
         <path fill="#00319c" d="M0 0h213.3v480H0z" />

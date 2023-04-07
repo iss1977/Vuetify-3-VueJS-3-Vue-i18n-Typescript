@@ -4,7 +4,9 @@
       <v-img gradient="to top right, rgba(19,84,122,.8), rgba(128,208,199,.8)"></v-img>
     </template>
 
-    <v-container class="fill-height d-flex align-center py-0">
+    <v-container class="fill-height d-flex align-center py-0"
+      v-if="!display.smAndDown.value"
+    >
       <v-avatar class="me-10 ms-4" color="grey-darken-1">
         <v-img src="@/assets/vue-i18n-logo.svg" alt="John"></v-img>
       </v-avatar>
@@ -19,6 +21,26 @@
         <ChooseLanguage />
       </v-responsive>
     </v-container>
+
+    <v-container class="fill-height d-flex align-center py-0"
+      v-if="display.smAndDown.value"
+    >
+    <v-row class="align-center">
+      <v-col cols="8" class="pa-0 ">
+        <v-btn v-for="link in links" :key="link.name" variant="text" :to="link.to" density="compact">
+          {{ link.name }}
+        </v-btn>
+      </v-col>
+      <v-col cols="4" class="pa-0">
+        <v-responsive max-width="200">
+          <ChooseLanguage /> 
+          <!-- TODO: Make for mobile -->
+        </v-responsive>
+      </v-col>
+    </v-row>
+    </v-container>
+
+    
   </v-app-bar>
 
   <!-- <nav>
@@ -40,9 +62,9 @@
 import ChooseLanguage from '@/components/ChooseLanguage.vue';
 import { useI18n } from 'vue-i18n';
 import { reactive, watch } from 'vue';
+import { DisplayInstance, useDisplay } from 'vuetify';
 
 const { t, locale } = useI18n({ useScope: 'global' });
-console.log('locale', locale)
 
 watch(
   () => locale.value ,
@@ -60,5 +82,13 @@ const links = reactive([
   {name: t('nav.landing'), to: '/landing'},
 ])
 
+const display: DisplayInstance = useDisplay();
+
+watch(
+  () => display.name.value,
+  () => {
+    console.log('display watch:', display.smAndDown.value)
+  }
+);
 
 </script>

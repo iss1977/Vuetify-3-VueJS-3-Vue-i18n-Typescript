@@ -1,11 +1,12 @@
 <template>
-  <v-sheet class="pa-12" color="grey-lighten-3">
+  <v-sheet class="pa-xs-0 pa-sm-12" color="grey-lighten-3">
     <v-sheet :elevation="6" class="mx-auto ma-6 pa-10 text-center">
       <p class="text-left">{{ $t('date_picker.select_date') }}</p>
       <Datepicker calendar-class-name="dp-date-intl-calendar" v-model="date" :format="format" :auto-apply="false"
         select-text="Alege" cancel-text="Renunt" show-now-button :day-names="dayNames" placeholder="Select Date"
-        week-start="1" :preview-format="format" :enable-time-picker="false">
-
+        week-start="1" :preview-format="format" :enable-time-picker="false"
+        ref="vueDatePickerRef"
+      >
         <template #now-button="{ selectCurrentDate }">
           <v-btn variant="outlined" size="small" color="primary" @click="selectCurrentDate">
             Acum
@@ -21,7 +22,8 @@
 
       </Datepicker>
       <p class="mt-6">{{ $t('date_picker.sample_dates_long_short') }}:</p>
-      <p>{{ $t('date_picker.short_date_text') }}: {{ $d(date,'short') }}</p>
+      <p>{{ $t('date_picker.short_date_time_text') }}: {{ $d(date,'short') }}</p>
+      <p>{{ $t('date_picker.short_date_text') }}: {{ $d(date,'shortOnlyDate') }}</p>
       <p>{{ $t('date_picker.long_date_text') }}: {{ $d(date,'long') }}</p>
       <p class="mt-10"> {{ $t('date_picker.translation_using_i18n-d_tag')}}:</p>
       <i18n-d tag="span" :value="new Date()" locale="ro" :format="{ key: 'long' }">
@@ -49,11 +51,11 @@ import '@vuepic/vue-datepicker/dist/main.css';
 import { ro } from 'date-fns/locale'; // used by Datepicker for localization
 
 import { useI18n } from 'vue-i18n';
-import { ref } from 'vue';
+import { ref, watch } from 'vue';
 
 const emit = defineEmits(['close-picker', 'select-date', 'invalid-select']);
 
-const { d, t } = useI18n();
+const { d, t, locale } = useI18n();
 
 const message = ref('')
 const loading = ref(true)
@@ -76,6 +78,15 @@ function zeroPad(num: number, places: number) {
   var zero = places - num.toString().length + 1;
   return Array(+(zero > 0 && zero)).join("0") + num;
 }
+
+// Update vue-datepicker selected date text on language change. Not working!
+const vueDatePickerRef = ref<InstanceType<typeof Datepicker> | null>(null);
+watch( locale,
+() => {
+  vueDatePickerRef.value?.$forceUpdate();
+  console.log('Current instance:', vueDatePickerRef)
+  console.log('Force update to repair in DateTimeViewComponent') // TODO: make this to work
+})
 
 </script>
 

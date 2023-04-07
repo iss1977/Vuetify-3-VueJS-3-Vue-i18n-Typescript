@@ -6,6 +6,7 @@
     "select_date": "Select date",
     "selected_date_is":"Selected date is",
     "sample_dates_long_short": "Sample dates in short and log formats",
+    "short_date_time_text": "Short date with time",
     "short_date_text": "Short date",
     "long_date_text": "Long date",
     "long_date_time_format_text":"Long date/time format",
