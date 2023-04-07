@@ -15,7 +15,7 @@
 
       <v-spacer></v-spacer>
 
-      <v-responsive max-width="250">
+      <v-responsive max-width="200">
         <ChooseLanguage />
       </v-responsive>
     </v-container>

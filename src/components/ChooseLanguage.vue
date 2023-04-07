@@ -2,9 +2,11 @@
   <v-select v-model="selected" :items="items" outlined label="Select language" density="comfortable" return-object
     :hide-details="true" :menu-props="{ closeOnContentClick: true }" light>
     <template v-slot:item="{ item, props }">
-      <v-list-item :title="item.title" @click="updateLanguage(item.value)" lines="one" density="compact">
-        <template v-slot:prepend>
-          <v-avatar :image="item.value.img" size="x-small"></v-avatar>
+      <v-list-item :title="item.title" @click="updateLanguage(item.value)" lines="one" density="compact" :item="item">
+        <template v-slot:prepend="{ }">
+          <!-- <v-avatar :image="item.value.img" size="x-small"></v-avatar> -->
+          <!-- <DeIconSVG height="15px"/> -->
+          <component v-bind:is="item.value.component" height="15px"></component>    
         </template>
         <template v-slot:title="{title}">
           <p class="text-body-2">{{ title }}</p>
@@ -12,12 +14,14 @@
       </v-list-item>
     </template>
 
-    <template v-slot:selection>
-      <v-img class="bg-white align-self-center mr-3" width="20" height="15" aspect-ratio="4 / 3"
+    <template v-slot:selection=" {item}">
+      <!-- <v-img class="bg-white align-self-center mr-3" width="20" height="15" aspect-ratio="4 / 3"
         :src="selected.img" cover 
-      ></v-img>
+      ></v-img> -->
+      <!-- <component v-bind:is="item.component"></component> -->
       <span>
-        {{ selected.title }} - selected
+        <component v-bind:is="item.value.component" height="15px"></component>  
+        {{ selected.title }}
       </span>
     </template>
   </v-select>
@@ -28,31 +32,37 @@
 <script setup lang="ts">
 
 import { savedLocale } from '@/tools/storageLocale';
-import { Ref, onUpdated, ref } from 'vue';
+import { ComponentPublicInstance, Ref, onUpdated, ref } from 'vue';
+import  DeIconSVG  from '@/components/icons/DeIconSVG.vue';
+import  EnIconSVG  from '@/components/icons/EnIconSVG.vue';
+import  RoIconSVG  from '@/components/icons/RoIconSVG.vue';
+
 import { useI18n } from 'vue-i18n';
 const t = useI18n();
 
 type ItemType = {
   title: string,
   value: string,
-  img?: string | undefined
+  component: typeof DeIconSVG
 }
+
+const component = DeIconSVG;
 
 const items: ItemType[] = [
   {
     title: "English",
     value: "en",
-    img: '/src/assets/flag-gb.svg'
+    component: EnIconSVG,
   },
   {
     title: "Deutsch",
     value: "de",
-    img: '/src/assets/flag-de.svg'
+    component: DeIconSVG,
   },
   {
     title: "Româna",
     value: "ro",
-    img: '/src/assets/flag-ro.svg'
+    component: RoIconSVG,
   },
 ]
 const selected:  Ref<ItemType> = ref<ItemType>(items[0])
