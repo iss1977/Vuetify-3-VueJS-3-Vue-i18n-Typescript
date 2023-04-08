@@ -5,7 +5,7 @@
       <Datepicker calendar-class-name="dp-date-intl-calendar" v-model="date" :format="format" :auto-apply="false"
         select-text="Alege" cancel-text="Renunt" show-now-button :day-names="dayNames" placeholder="Select Date"
         week-start="1" :preview-format="format" :enable-time-picker="false"
-        ref="vueDatePickerRef"
+        :key="componentKey"
       >
         <template #now-button="{ selectCurrentDate }">
           <v-btn variant="outlined" size="small" color="primary" @click="selectCurrentDate">
@@ -79,13 +79,12 @@ function zeroPad(num: number, places: number) {
   return Array(+(zero > 0 && zero)).join("0") + num;
 }
 
-// Update vue-datepicker selected date text on language change. Not working!
-const vueDatePickerRef = ref<InstanceType<typeof Datepicker> | null>(null);
+// Update vue-datepicker selected date text on language change.
+// Key-changing to force a component refresh
+const componentKey = ref<number>(0);
 watch( locale,
 () => {
-  vueDatePickerRef.value?.$forceUpdate();
-  console.log('Current instance:', vueDatePickerRef)
-  console.log('Force update to repair in DateTimeViewComponent') // TODO: make this to work
+  componentKey.value++; 
 })
 
 </script>

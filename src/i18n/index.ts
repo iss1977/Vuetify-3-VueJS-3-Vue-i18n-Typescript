@@ -15,11 +15,6 @@ export enum Locales {
   DE = 'de',
 }
 
-export const LOCALES = [
-  { value: 'en', caption: 'English' },
-  { value: 'de', caption: 'Deutsch' },
-  { value: 'ro', caption: 'Romanian' }
-]
 
 const messages = {
   [Locales.EN]: en,
