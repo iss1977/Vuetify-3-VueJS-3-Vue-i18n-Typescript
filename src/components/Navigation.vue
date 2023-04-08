@@ -1,68 +1,104 @@
 <template>
-  <v-app-bar flat color="teal-darken-4" image="@/assets/many-many-flags.png">
-    <template v-slot:image>
-      <v-img gradient="to top right, rgba(19,84,122,.8), rgba(128,208,199,.8)"></v-img>
-    </template>
-
-    <v-container class="fill-height d-flex align-center py-0"
-      v-if="!display.smAndDown.value"
-    >
-      <v-avatar class="me-10 ms-4" color="grey-darken-1">
-        <v-img src="@/assets/vue-i18n-logo.svg" alt="John"></v-img>
-      </v-avatar>
-
-      <v-btn v-for="link in links" :key="link.name" variant="text" :to="link.to">
-        {{ link.name }}
-      </v-btn>
-
-      <v-spacer></v-spacer>
-
-      <v-responsive max-width="200">
-        <ChooseLanguage />
-      </v-responsive>
-    </v-container>
-
-    <v-container class="fill-height d-flex align-center py-0"
-      v-if="display.smAndDown.value"
-    >
-    <v-row class="align-center">
-      <v-col cols="8" class="pa-0 ">
-        <v-btn v-for="link in links" :key="link.name" variant="text" :to="link.to" density="compact">
-          {{ link.name }}
-        </v-btn>
-      </v-col>
-      <v-col cols="4" class="pa-0">
-        <v-responsive max-width="200">
-          <ChooseLanguage /> 
-          <!-- TODO: Make for mobile -->
-        </v-responsive>
-      </v-col>
-    </v-row>
-    </v-container>
-
-    
-  </v-app-bar>
-
-  <!-- <nav>
-    <ul>
-      <li>
-        <RouterLink to="/">{{ $t("nav.home") }}</RouterLink>
-        <RouterLink to="/">Home</RouterLink>
-      </li>
-      <li>
-         <RouterLink to="/about">{{ $t("nav.about") }}</RouterLink> 
-        <RouterLink to="/about">About</RouterLink>
-      </li>
-    </ul>
-  </nav> -->
+  <nav>
+    <v-navigation-drawer
+       v-model="drawer"
+       app
+       temporary
+       src="@/assets/bgDrawer.jpg"
+       id="navigation-drawer"
+     >
+       <v-list>
+         <v-list-item
+            prepend-avatar="@/assets/logo.png"
+         >
+             <v-list-item-title class="title">{{ $t('landing.navigation.app-title')}}</v-list-item-title>
+             <v-list-item-subtitle>{{ $t('landing.navigation.app-subtitle')}}</v-list-item-subtitle>
+         </v-list-item>
+       </v-list>
+ 
+       <v-divider />
+ 
+       <v-list dense>
+         <v-list-item
+           v-for="(link, index) in links"
+           :key="index"
+           link
+           :to="link.to"
+         >
+           <v-list-item-title class="subtitile-1">
+             {{link.name}}
+           </v-list-item-title>
+         </v-list-item>
+       </v-list>
+       <v-responsive max-width="250" class="text-white mx-3">
+         <ChooseLanguage/>
+       </v-responsive>
+     </v-navigation-drawer>
+ 
+ 
+   <v-app-bar flat color="teal-darken-4" image="@/assets/many-many-flags.png">
+     <template v-slot:image>
+       <v-img gradient="to top right, rgba(19,84,122,.8), rgba(128,208,199,.8)"></v-img>
+     </template>
+ 
+     <v-container class="fill-height d-flex align-center py-0"
+       v-if="!display.smAndDown.value"
+     >
+       <v-avatar class="me-10 ms-4" color="grey-darken-1">
+         <v-img src="@/assets/vue-i18n-logo.svg" alt="John"></v-img>
+       </v-avatar>
+ 
+       <v-btn v-for="link in links" :key="link.name" variant="text" :to="link.to">
+         {{ link.name }}
+       </v-btn>
+ 
+       <v-spacer></v-spacer>
+ 
+       <v-responsive max-width="200">
+         <ChooseLanguage />
+       </v-responsive>
+     </v-container>
+ 
+     <v-container class="fill-height d-flex align-center py-0"
+       v-if="display.smAndDown.value"
+     >
+     <v-toolbar-title>
+         <v-img src="@/assets/logo.png" max-width="50px" />
+     </v-toolbar-title>
+       <v-spacer />
+       <v-app-bar-nav-icon
+         @click.stop="drawer = !drawer"
+         class="mr-4"
+         color="white"
+       />
+     </v-container>
+ 
+     
+   </v-app-bar>
+ 
+   <!-- <nav>
+     <ul>
+       <li>
+         <RouterLink to="/">{{ $t("nav.home") }}</RouterLink>
+         <RouterLink to="/">Home</RouterLink>
+       </li>
+       <li>
+          <RouterLink to="/about">{{ $t("nav.about") }}</RouterLink> 
+         <RouterLink to="/about">About</RouterLink>
+       </li>
+     </ul>
+   </nav> -->
+  </nav>
 </template>
 
 <script setup lang="ts">
 
 import ChooseLanguage from '@/components/ChooseLanguage.vue';
 import { useI18n } from 'vue-i18n';
-import { reactive, watch } from 'vue';
+import { ref, reactive, watch } from 'vue';
 import { DisplayInstance, useDisplay } from 'vuetify';
+
+const drawer = ref(true); // sidemenu on/off
 
 const { t, locale } = useI18n({ useScope: 'global' });
 
@@ -92,3 +128,12 @@ watch(
 );
 
 </script>
+
+
+<style scoped >
+
+nav :deep(#navigation-drawer) {
+  color: white;
+  background: rgba(44, 71, 68,.8);
+}
+</style>

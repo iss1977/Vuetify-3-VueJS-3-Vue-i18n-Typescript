@@ -11,7 +11,6 @@ import { onMounted, nextTick } from 'vue';
 import BaseLayout from '@/layouts/BaseLayout.vue'
 import HomeView from './views/HomeView.vue';
 import ChooseLanguage from './components/ChooseLanguage.vue';
-import { LOCALES } from "@/i18n";
 import { defaultLocale } from "@/i18n";
 import { useI18n } from 'vue-i18n';
 

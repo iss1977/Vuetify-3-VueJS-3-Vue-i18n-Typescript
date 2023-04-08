@@ -11,8 +11,14 @@
 
 <script setup lang="ts">
 import { ref } from 'vue';
-import { LOCALES } from '@/i18n';
 import { useI18n } from 'vue-i18n';
+
+const LOCALES = [
+  { value: 'en', caption: 'English' },
+  { value: 'de', caption: 'Deutsch' },
+  { value: 'ro', caption: 'Romanian' }
+]
+
 
 
 const availableLanguages = LOCALES.map( (lang) => lang.caption);
