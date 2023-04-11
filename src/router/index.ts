@@ -1,13 +1,18 @@
 // Composables
-import { createRouter, createWebHistory } from 'vue-router'
+import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
 
-const routes = [
+const routes: Array<RouteRecordRaw> = [
   {
     path: '/',
+    redirect: '/landing',
+  },
+  {
+    path:'/examples',
+    redirect: '/examples/home',
     component: () => import('@/layouts/BaseLayout.vue'),
     children: [
       {
-        path: '',
+        path: 'home',
         name: 'Home',
         // route level code-splitting
         // this generates a separate chunk (about.[hash].js) for this route
@@ -23,11 +28,11 @@ const routes = [
     ],
   },
   {
-    path: '/',
+    path: '/landing',
     component: () => import('@/layouts/LandingLayout.vue'),
     children: [
       {
-        path: 'landing',
+        path: '',
         name: 'LandingPage',
         // route level code-splitting
         // this generates a separate chunk (about.[hash].js) for this route
