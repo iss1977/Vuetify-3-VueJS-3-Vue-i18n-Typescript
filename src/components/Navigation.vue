@@ -31,7 +31,7 @@
          </v-list-item>
        </v-list>
        <v-responsive max-width="250" class="text-white mx-3">
-         <ChooseLanguage/>
+         <ChooseLanguage @language-choosen="languageChange()"/>
        </v-responsive>
      </v-navigation-drawer>
  
@@ -55,7 +55,7 @@
        <v-spacer></v-spacer>
  
        <v-responsive max-width="200">
-         <ChooseLanguage />
+         <ChooseLanguage @language-choosen="languageChange()"/>
        </v-responsive>
      </v-container>
  
@@ -93,14 +93,21 @@
 
 <script setup lang="ts">
 
-import ChooseLanguage from '@/components/ChooseLanguage.vue';
+import ChooseLanguage from '@/components/shared/ChooseLanguage.vue';
 import { useI18n } from 'vue-i18n';
 import { ref, reactive, watch } from 'vue';
 import { DisplayInstance, useDisplay } from 'vuetify';
 
-const drawer = ref(true); // sidemenu on/off
+const drawer = ref(false); // sidemenu on/off
 
 const { t, locale } = useI18n({ useScope: 'global' });
+
+const languageChange = () => {
+  setTimeout(() => {
+    drawer.value = false
+  }, 300);
+}
+
 
 watch(
   () => locale.value ,
@@ -113,9 +120,9 @@ watch(
 );
 
 const links = reactive([
-  {name: t('nav.home'), to: '/'},
-  {name: t('nav.about'), to: '/about'},
-  {name: t('nav.landing'), to: '/landing'},
+  { name: t('nav.home'), to: '/' },
+  { name: t('nav.about'), to: '/about' },
+  { name: t('nav.landing'), to: '/landing' },
 ])
 
 const display: DisplayInstance = useDisplay();

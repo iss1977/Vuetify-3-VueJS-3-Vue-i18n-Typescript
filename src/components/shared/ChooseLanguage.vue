@@ -40,6 +40,8 @@ import  RoIconSVG  from '@/components/icons/RoIconSVG.vue';
 import { useI18n } from 'vue-i18n';
 const t = useI18n();
 
+const emit = defineEmits(['languageChoosen']);
+
 type ItemType = {
   title: string,
   value: string,
@@ -71,6 +73,7 @@ const updateLanguage = (event: ItemType) => {
   selected.value = event
   t.locale.value = event.value;
   savedLocale.language = event.value; // save to localStorage
+  emit('languageChoosen');
 }
 
 // set the v-select to the current langguage

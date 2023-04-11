@@ -36,7 +36,7 @@
         </v-list-item>
       </v-list>
       <v-responsive max-width="250" class="text-white mx-3">
-        <ChooseLanguage/>
+        <ChooseLanguage @language-choosen="languageChange"/>
       </v-responsive>
     </v-navigation-drawer>
 
@@ -72,7 +72,7 @@
         </v-btn>
       </div>
       <v-responsive v-if="!isXs" max-width="250" class="text-white mx-3">
-        <ChooseLanguage/>
+        <ChooseLanguage  @language-choosen="languageChange"/>
       </v-responsive>
 
       
@@ -86,7 +86,7 @@
 
 <script setup lang="ts">
 import { ref, onMounted } from 'vue';
-import ChooseLanguage from '../ChooseLanguage.vue';
+import ChooseLanguage from '@/components/shared/ChooseLanguage.vue';
 
 const props = defineProps({
   scrolled: {
@@ -95,6 +95,12 @@ const props = defineProps({
     default: false
   }
 });
+
+const languageChange = () => {
+  setTimeout(() => {
+    drawer.value = false
+  }, 300);
+}
 
 const isWindowScrolled = ref(props.scrolled); // used for app bar color
 
