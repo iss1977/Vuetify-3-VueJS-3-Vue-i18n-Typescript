@@ -13,9 +13,18 @@
     "translation_using_i18n-d_tag": "Translation using i18n-d tag"
   },
   "nav": {
-    "home": "Home",
-    "about": "About",
-    "landing": "Landing"
+    "examples": {
+      "home": "Home",
+      "about": "About",
+      "landing": "Landing"
+    },
+    "landing": {
+      "examples": "Examples",
+      "about": "About",
+      "download": "Download",
+      "pricing": "Priceing",
+      "contact": "Contact"
+    }
   },
 "sheet_title": {
   "translations": "Messages - local language",

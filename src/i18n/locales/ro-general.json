@@ -13,9 +13,18 @@
     "translation_using_i18n-d_tag": "Traducere folosind blocul i18n-d"
   },
   "nav": {
-    "home": "Acasa",
-    "about": "Despre",
-    "landing": "Lansare"
+    "examples": {
+      "home": "Acasă",
+      "about": "Despre",
+      "landing": "Pagină lansare"
+    },
+    "landing": {
+      "examples": "Exemple",
+      "about": "Despre",
+      "download": "Descărcare",
+      "pricing": "Prețuri",
+      "contact": "Contact"
+    }
   },
   "hello_world": {
     "title": "Salutari de la Vuetify 3 internationalizare"

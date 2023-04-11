@@ -5,7 +5,7 @@ Application backbone is VueJS3, Vuetify 3 & Vite
 Features:
 - integration of the Vue-i18n package
 - typescirpt support
-- translation in 2 languages
+- translation in 3 languages
 - change the language on the fly
 - custom pluralization
 - date/time localization
@@ -14,9 +14,6 @@ Features:
 - vue-datepicker localization
 - remember language between sessions
 - mobile optimized demo landing page with translated validation messages
-
-
-
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/eb9ec711-098b-4fdc-8a19-b0314483eb9b/deploy-status)](https://app.netlify.com/sites/vuetify3-vue-internationalization/deploys)
 
@@ -33,4 +30,4 @@ _https://vue-i18n.intlify.dev/_
 
 Special thanks to
 https://github.dev/Joabsonlg/vuetify-landing-page
-who developed the landing page ( Vuetify 2)
+who developed the landing page ( Vuetify 2, VueJs 2, Vue CLI)

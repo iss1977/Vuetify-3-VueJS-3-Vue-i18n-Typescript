@@ -1,8 +1,8 @@
 {
   "landing": {
     "navigation":{
-      "app-title":"Demo Page",
-      "app-subtitle":"Web",
+      "app-title":"Pagină demo",
+      "app-subtitle":"Vue i18n",
       "home":"Acasa",
       "about":"Despre",
       "download":"Descarcă",

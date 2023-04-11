@@ -4,7 +4,6 @@
       <v-col cols="12">
         <v-sheet class="pa-xs-0 pa-sm-12" color="grey-lighten-3">
           <v-sheet :elevation="6" class="mx-auto ma-6 pa-10 pt-2 text-center">
-            <LocalizationInfo class="text-right"/>
             <VSheetTitle :title="t('sheet_title.translations')"/>
             <p>{{ $t("home.change_language_hint", { app_name: "Vue-i18n" }) }}</p>
             <p>{{ $t("home.translation_via_script", { translated: myTranslatedText.value}) }} </p>
@@ -74,7 +73,6 @@ import { TranslateResult } from "vue-i18n";
 
 import VSheetTitle from '@/components/VSheetTitle.vue'
 import DateTimeViewComponent from '@/components/DateTimeViewComponent.vue';
-import LocalizationInfo from '@/components/info.containers/LocalizationInfo.vue';
 
 const { t, n, locale } = useI18n({ useScope: 'global' });
 

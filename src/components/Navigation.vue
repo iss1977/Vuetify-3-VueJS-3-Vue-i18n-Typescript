@@ -76,18 +76,6 @@
      
    </v-app-bar>
  
-   <!-- <nav>
-     <ul>
-       <li>
-         <RouterLink to="/">{{ $t("nav.home") }}</RouterLink>
-         <RouterLink to="/">Home</RouterLink>
-       </li>
-       <li>
-          <RouterLink to="/about">{{ $t("nav.about") }}</RouterLink> 
-         <RouterLink to="/about">About</RouterLink>
-       </li>
-     </ul>
-   </nav> -->
   </nav>
 </template>
 
@@ -113,16 +101,16 @@ watch(
   () => locale.value ,
   ( newVal, oldVal) => {
       console.log('New locale in anvigation', newVal)
-      links[0].name = t('nav.home')
-      links[1].name = t('nav.about') //TODO: find a better solution
-      links[2].name = t('nav.landing') //TODO: find a better solution
+      links[0].name = t('nav.examples.home')
+      links[1].name = t('nav.examples.about') //TODO: find a better solution
+      links[2].name = t('nav.examples.landing') //TODO: find a better solution
   }
 );
 
 const links = reactive([
-  { name: t('nav.home'), to: '/' },
-  { name: t('nav.about'), to: '/about' },
-  { name: t('nav.landing'), to: '/landing' },
+  { name: t('nav.examples.home'), to: { name: 'Home'} },
+  { name: t('nav.examples.about'), to: {name: 'About'} },
+  { name: t('nav.examples.landing'), to: { name: 'LandingPage'}},
 ])
 
 const display: DisplayInstance = useDisplay();

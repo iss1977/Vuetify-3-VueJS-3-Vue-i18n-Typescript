@@ -13,9 +13,18 @@
     "translation_using_i18n-d_tag": "Übersetzung mit i18n-d-Tag"
   },
   "nav": {
-    "home": "Startseite",
-    "about": "Etwas über",
-    "landing": "Landeseite"
+    "examples": {
+      "home": "Startseite",
+      "about": "Über uns",
+      "landing": "Demo Seite"
+    },
+    "landing": {
+      "examples": "Beispiele",
+      "about": "Über uns",
+      "download": "Herunterlanden",
+      "pricing": "Preise",
+      "contact": "Kontakt"
+    }
   },
 "sheet_title": {
   "translations": "Nachrichten - Landessprache",

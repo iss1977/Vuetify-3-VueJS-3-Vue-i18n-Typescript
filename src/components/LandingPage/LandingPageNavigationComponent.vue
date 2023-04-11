@@ -86,7 +86,10 @@
 
 <script setup lang="ts">
 import { ref, onMounted } from 'vue';
+import { useI18n } from 'vue-i18n';
 import ChooseLanguage from '@/components/shared/ChooseLanguage.vue';
+
+const { t } = useI18n();
 
 const props = defineProps({
   scrolled: {
@@ -112,15 +115,15 @@ const isXs = ref(false);
 interface Items {
   icon: string;
   displayText: string;
-  toLink: string;
+  toLink: string | object;
   scrollToId: string
 }
 const items: Items[]=  [
-  {icon: "mdi-home-outline", displayText: "Home", toLink:"/", scrollToId: ""},
-  {icon: "mdi-information-outline", displayText: "About", toLink:"", scrollToId: "features"},
-  {icon: "mdi-download-box-outline", displayText: "Download", toLink:"", scrollToId: "download"},
-  {icon: "mdi-currency-usd", displayText: "Priceing", toLink:"", scrollToId: "pricing"},
-  {icon: "mdi-email-outline", displayText: "Contact", toLink:"", scrollToId: "contact"},
+  {icon: "mdi-home-outline", displayText: t('nav.landing.examples'), toLink:{ name: 'Home' }, scrollToId: ""},
+  {icon: "mdi-information-outline", displayText: t('nav.landing.about'), toLink:"", scrollToId: "features"},
+  {icon: "mdi-download-box-outline", displayText: t('nav.landing.download'), toLink:"", scrollToId: "download"},
+  {icon: "mdi-currency-usd", displayText: t('nav.landing.pricing'), toLink:"", scrollToId: "pricing"},
+  {icon: "mdi-email-outline", displayText: t('nav.landing.contact'), toLink:"", scrollToId: "contact"},
 ];
 
   const link = '/';

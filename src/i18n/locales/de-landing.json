@@ -2,7 +2,7 @@
   "landing": {
     "navigation":{
       "app-title":"Demo-Seite",
-      "app-subtitle":"Web",
+      "app-subtitle":"Vue i18n",
       "home":"Startseite",
       "about":"Info-Seite",
       "download":"Herunterladen",
@@ -43,7 +43,7 @@
       "text": "Lokalisierte Software muss streng wie die englische Originalsoftware getestet werden. Sie möchten in Ihrer Software keine Fremdsprache „aus dem Kontext gerissen“ sehen."
     },
     "pricing-section": {
-      "title":"Preisgestaltung",
+      "title":"Preise",
       "action-button-text":"Jetzt bestellen",
       "plan-1": {
         "plan-title":"START",

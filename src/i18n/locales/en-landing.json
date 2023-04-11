@@ -2,7 +2,7 @@
   "landing": {
     "navigation":{
       "app-title":"Demo Page",
-      "app-subtitle":"Web",
+      "app-subtitle":"Vue i18n",
       "home":"Home",
       "about":"About",
       "download":"Download",
